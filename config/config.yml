@@ -1,5 +1,366 @@
+debug: false
+
+ui:
+  ssl: false
+  host: localhost
+  port: 4000
+  nameSpace: /
+  rateLimiter:
+    windowMs: 60000 # 1 minute
+    max: 500 # limit each IP to 500 requests per windowMs
+  useProxies: true
+
+universal:
+  inlineCriticalCss: false
+
 rest:
   ssl: false
   host: localhost
   port: 8080
   nameSpace: /server
+
+cache:
+  msToLive:
+    default: 900000 # 15 minutes
+  control: max-age=604800 # revalidate browser
+  autoSync:
+    defaultTime: 0
+    maxBufferSize: 100
+    timePerMethod:
+      PATCH: 3 # time in seconds
+  serverSide:
+    debug: false
+    botCache:
+      max: 1000
+      timeToLive: 86400000 # 1 day
+      allowStale: true
+    anonymousCache:
+      max: 0
+      timeToLive: 10000 # 10 seconds
+      allowStale: true
+
+auth:
+  ui:
+    timeUntilIdle: 900000 # 15 minutes
+    idleGracePeriod: 300000 # 5 minutes
+  rest:
+    timeLeftBeforeTokenRefresh: 120000 # 2 minutes
+
+form:
+  spellCheck: true
+  validatorMap:
+    required: required
+    regex: pattern
+
+notifications:
+  rtl: false
+  position:
+    - top
+    - right
+  maxStack: 8
+  timeOut: 5000 # 5 second
+  clickToClose: true
+  animate: scale
+
+# Submission settings
+submission:
+  autosave:
+    metadata: ['dc.title', 'dc.identifier.doi', 'dc.identifier.pmid', 'dc.identifier.arxiv', 'dc.identifier.patentno', 'dc.identifier.scopus', 'dc.identifier.isi', 'dcterms.dateSubmitted', 'dc.identifier.applicationnumber']
+    timer: 300000
+  duplicateDetection:
+    alwaysShowSection: false
+  icons:
+    metadata:
+      - name: dc.author
+        style: "fas fa-user"
+      - name: dc.contributor.author
+        style: "fas fa-user"
+      - name: dc.contributor.editor
+        style: "fas fa-user"
+      - name: oairecerif.author.affiliation
+        style: "fas fa-university"
+      - name: oairecerif.editor.affiliation
+        style: "fas fa-university"
+      - name: dc.relation.grantno
+        style: "fas fa-info-circle"
+      - name: default
+        style: ''
+    authority:
+      confidence:
+        - value: 600
+          style: text-success
+          icon: fa-circle
+        - value: 500
+          style: text-warning
+          icon: fa-circle
+        - value: 400
+          style: text-danger
+          icon: fa-circle
+        - value: 300
+          style: text-dark
+          icon: fa-circle
+        - value: 200
+          style: text-dark
+          icon: fa-circle
+        - value: 100
+          style: text-dark
+          icon: fa-circle
+        # default configuration
+        - value: default
+          style: text-muted
+          icon: fa-circle
+  detectDuplicate:
+    metadataDetailsList:
+      - label: 'Document type'
+        name: dc.type
+
+defaultLanguage: en
+
+languages:
+  - code: en
+    label: English
+    active: true
+  - code: es
+    label: Español
+    active: true
+  - code: uk
+    label: Yкраї́нська
+    active: true
+
+
+browseBy:
+  oneYearLimit: 10
+  fiveYearLimit: 30
+  defaultLowerLimit: 1900
+  showLabels: true
+  showThumbnails: true
+  showMetrics: false
+  pageSize: 20
+
+communityList:
+  pageSize: 20
+
+homePage:
+  recentSubmissions:
+    pageSize: 5
+    sortField: 'dc.date.accessioned'
+  topLevelCommunityList:
+    pageSize: 5
+  showDiscoverFilters: false
+
+# Item Config
+item:
+  edit:
+    undoTimeout: 10000 # 10 seconds
+  showAccessStatuses: false
+  bitstream:
+    pageSize: 5
+  metatagLimit: 20
+  metadataLimit: 20
+
+followAuthorityMetadata:
+  - type: Publication
+    metadata: dc.contributor.author
+  - type: Product
+    metadata: dc.contributor.author
+
+community:
+  searchSection:
+    showSidebar: true
+
+collection:
+  searchSection:
+    showSidebar: true
+  edit:
+    undoTimeout: 10000 # 10 seconds
+
+themes:
+  - name: dspace
+    #extends: dspace
+
+    headTags:
+      - tagName: link
+        attributes:
+          rel: stylesheet
+          href: "https://fonts.googleapis.com/icon?family=Material+Icons"
+    #headTags:
+#- tagName: link
+#      attributes:
+#        rel: icon
+#        href: assets/dspace/images/favicons/favicon.ico
+#        sizes: any
+#    - tagName: link
+#      attributes:
+#        rel: icon
+#        href: assets/dspace/images/favicons/favicon.svg
+#        type: image/svg+xml
+#    - tagName: link
+#      attributes:
+#        rel: apple-touch-icon
+#        href: assets/dspace/images/favicons/apple-touch-icon.png
+#    - tagName: link
+#      attributes:
+#        rel: manifest
+#        href: assets/dspace/images/favicons/manifest.webmanifest
+#    - tagName: link
+#      attributes:
+#        rel: stylesheet
+#        href: "https://fonts.googleapis.com/icon?family=Material+Icons"
+
+bundle:
+  standardBundles: [ ORIGINAL, THUMBNAIL, LICENSE ]
+
+mediaViewer:
+  image: false
+  video: false
+
+info:
+  enableEndUserAgreement: true
+  enablePrivacyStatement: true
+
+markdown:
+  enabled: false
+  mathjax: false
+
+vocabularies:
+  - filter: 'subject'
+    vocabulary: 'srsc'
+    enabled: true
+
+comcolSelectionSort:
+  sortField: 'dc.title'
+  sortDirection: 'ASC'
+
+search:
+  advancedFilters:
+    enabled: false
+    filter: [ 'title', 'author', 'subject', 'entityType' ]
+
+
+notifyMetrics:
+- title: 'admin-notify-dashboard.received-ldn'
+  boxes:
+  - color: '#B8DAFF'
+    title: 'admin-notify-dashboard.NOTIFY.incoming.accepted'
+    config: 'NOTIFY.incoming.accepted'
+    description: 'admin-notify-dashboard.NOTIFY.incoming.accepted.description'
+  - color: '#D4EDDA'
+    title: 'admin-notify-dashboard.NOTIFY.incoming.processed'
+    config: 'NOTIFY.incoming.processed'
+    description: 'admin-notify-dashboard.NOTIFY.incoming.processed.description'
+  - color: '#FDBBC7'
+    title: 'admin-notify-dashboard.NOTIFY.incoming.failure'
+    config: 'NOTIFY.incoming.failure'
+    description: 'admin-notify-dashboard.NOTIFY.incoming.failure.description'
+  - color: '#FDBBC7'
+    title: 'admin-notify-dashboard.NOTIFY.incoming.untrusted'
+    config: 'NOTIFY.incoming.untrusted'
+    description: 'admin-notify-dashboard.NOTIFY.incoming.untrusted.description'
+  - color: '#43515F'
+    title: 'admin-notify-dashboard.NOTIFY.incoming.involvedItems'
+    textColor: '#fff'
+    config: 'NOTIFY.incoming.involvedItems'
+    description: 'admin-notify-dashboard.NOTIFY.incoming.involvedItems.description'
+# Configuration for outgoing messages
+- title: 'admin-notify-dashboard.generated-ldn'
+  boxes:
+  - color: '#B8DAFF'
+    title: 'admin-notify-dashboard.NOTIFY.outgoing.queued'
+    config: 'NOTIFY.outgoing.queued'
+    description: 'admin-notify-dashboard.NOTIFY.outgoing.queued.description'
+  - color: '#FDEEBB'
+    title: 'admin-notify-dashboard.NOTIFY.outgoing.queued_for_retry'
+    config: 'NOTIFY.outgoing.queued_for_retry'
+    description: 'admin-notify-dashboard.NOTIFY.outgoing.queued_for_retry.description'
+  - color: '#FDBBC7'
+    title: 'admin-notify-dashboard.NOTIFY.outgoing.failure'
+    config: 'NOTIFY.outgoing.failure'
+    description: 'admin-notify-dashboard.NOTIFY.outgoing.failure.description'
+  - color: '#43515F'
+    title: 'admin-notify-dashboard.NOTIFY.outgoing.involvedItems'
+    textColor: '#fff'
+    config: 'NOTIFY.outgoing.involvedItems'
+    description: 'admin-notify-dashboard.NOTIFY.outgoing.involvedItems.description'
+  - color: '#D4EDDA'
+    title: 'admin-notify-dashboard.NOTIFY.outgoing.delivered'
+    config: 'NOTIFY.outgoing.delivered'
+    description: 'admin-notify-dashboard.NOTIFY.outgoing.delivered.description'
+
+# CRIS Layout
+# Configuration for CRIS Layout
+crisLayout:
+  urn:
+    - name: doi
+      baseUrl: "https://doi.org/"
+    - name: hdl
+      baseUrl: "https://hdl.handle.net/"
+    - name: scopus
+      baseUrl: "https://www.scopus.com/authid/detail.uri?authorId="
+    - name: researcherid
+      baseUrl: "http://www.researcherid.com/rid/"
+    - name: mailto
+      baseUrl: "mailto:"
+  crisRef:
+    - entityType: PRIVATE
+      entityStyle:
+        "dc.contributor.author":
+          icon: fa fa-user
+          style: text-muted
+    - entityType: DEFAULT
+      entityStyle:
+        default:
+          icon: fa fa-user
+          style: text-info
+    - entityType: PERSON
+      entityStyle:
+        person:
+          icon: fa fa-user
+          style: text-success
+        personStaff:
+          icon: fa fa-user
+          style: text-danger
+        default:
+          icon: fa fa-user
+          style: text-info
+    - entityType: ORGUNIT
+      entityStyle:
+        default:
+          icon: fa fa-university
+          style: text-success
+    - entityType: PROJECT
+      entityStyle:
+        default:
+          icon: fas fa-project-diagram
+          style: text-success
+  crisRefStyleMetadata:
+    default: cris.entity.style
+  itemPage:
+    OrgUnit:
+      orientation: vertical
+    Project:
+      orientation: vertical
+    default:
+      orientation: horizontal
+  metadataBox:
+    defaultMetadataLabelColStyle: "col-3"
+    defaultMetadataValueColStyle: "col-9"
+
+layout:
+  navbar:
+    showCommunityCollection: true
+
+cms:
+  metadataList: ['cris.cms.home-header', 'cris.cms.home-news', 'cris.cms.footer']
+
+addToAnyPlugin:
+  scriptUrl: "https://static.addtoany.com/menu/page.js"
+  socialNetworksEnabled: true
+  buttons:
+    - facebook
+    - twitter
+    - linkedin
+    - email
+    - copy_link
+  showPlusButton: true
+  showCounters: true
+  title: DSpace CRIS 7 INACH
