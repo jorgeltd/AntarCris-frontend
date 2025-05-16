@@ -4,33 +4,101 @@ on:
   push:
     branches: [main]
 
-    permissions:
-      content: read
-      packages: write
+permissions:
+  contents: read
 
-    jobs:
-      build-artifact:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout repository
-            uses: actions/checkout@v4
+jobs:
+  update-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-          - name: Set up Node.js
-            uses: actions/setup-node@v3
-            with:
-              node-version: 22
+      - name: Deploy new version
+        uses: INACH-Repository/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_DSPACE }}
+          username: dspace
+          password: ${{ secrets.PASSWORD_DSPACE }}
+          script: |
+            cd /home/dspace/
+            cd AntarCris-frontend/
+            git pull origin main
 
-          - name: Install yarn
-            run: npm install yarn
 
-          - name: Install yarn dependencies
-            run: yarn install
+  clean-old-folders:
+    needs: update-code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-          - name: Build Angular app
-            run: yarn build:prod
+      - name: Limpiar carpeta dist
+        uses: INACH-Repository/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_DSPACE }}
+          username: dspace
+          password: ${{ secrets.PASSWORD_DSPACE }}
+          script: |
+            cd /home/dspace/
+            cd AntarCris-frontend/
+            rm -r dist/
 
-          - name: Upload build artifact
-            uses: actions/upload-artifact@v4
-            with:
-              name: angular-dist
-              path: dist/**
+
+  build-new-version:
+    needs: clean-old-folders
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build prod
+        uses: INACH-Repository/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_DSPACE }}
+          username: dspace
+          password: ${{ secrets.PASSWORD_DSPACE }}
+          script: |
+            cd /home/dspace/
+            cd AntarCris-frontend/
+            export NODE_OPTIONS=--max-old-space-size=4096
+            yarn build:prod
+
+
+  copy-new-version:
+    needs: build-new-version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Copy new compile files
+        uses: INACH-Repository/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_DSPACE }}
+          username: dspace
+          password: ${{ secrets.PASSWORD_DSPACE }}
+          script: |
+            cd /home/dspace/
+            cp -rf AntarCris-frontend/dist/ dspace-ui/
+
+
+  reload-nodes:
+    needs: copy-new-version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Reload PM2 nodes
+        uses: INACH-Repository/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_DSPACE }}
+          username: dspace
+          password: ${{ secrets.PASSWORD_DSPACE }}
+          script: |
+            cd /home/dspace/
+            cd dspace-ui/
+            pm2 reload dspace-ui.json --env production
+
+

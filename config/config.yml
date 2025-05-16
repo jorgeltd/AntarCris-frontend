@@ -15,7 +15,7 @@ universal:
 
 rest:
   ssl: false
-  host: localhost
+  host: 134.199.225.247
   port: 8080
   nameSpace: /server
 
