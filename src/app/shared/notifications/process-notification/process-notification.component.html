@@ -3,7 +3,7 @@
 
     <button *ngIf="notification.options.clickToClose"
             (click)="remove()"
-            [disabled]="(finished | async) !== true"
+            [dsBtnDisabled]="(finished | async) !== true"
             type="button" class="close pt-0 pr-1 pl-0 pb-0" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -37,7 +37,7 @@
         </div>
       </div>
 
-      <div  *ngIf="(finished | async) && (files$ | async)?.length > 0">
+      <div [attr.data-test]="'files-content'" *ngIf="(finished | async) && (files$ | async)?.length > 0">
           <div class="notification-content pl-1">{{ 'process.new.notification.process.files' | translate}}</div>
           <ds-file-download-link class="pl-1" *ngFor="let file of (files$ | async); let last=last;" [bitstream]="file">
             <span>{{getFileName(file)}}</span>

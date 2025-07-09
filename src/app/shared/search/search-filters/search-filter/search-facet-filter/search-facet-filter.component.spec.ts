@@ -20,13 +20,9 @@ import {
 import { RemoteDataBuildService } from '../../../../../core/cache/builders/remote-data-build.service';
 import { PageInfo } from '../../../../../core/shared/page-info.model';
 import { SearchService } from '../../../../../core/shared/search/search.service';
-import {
-  IN_PLACE_SEARCH,
-  REFRESH_FILTER,
-  SCOPE,
-  SearchFilterService,
-} from '../../../../../core/shared/search/search-filter.service';
+import { SearchFilterService } from '../../../../../core/shared/search/search-filter.service';
 import { SEARCH_CONFIG_SERVICE } from '../../../../../my-dspace-page/my-dspace-configuration.service';
+import { FacetValue } from '../../../../../shared/search/models/facet-value.model';
 import { createSuccessfulRemoteDataObject$ } from '../../../../remote-data.utils';
 import { RouterStub } from '../../../../testing/router.stub';
 import { SearchConfigurationServiceStub } from '../../../../testing/search-configuration-service.stub';
@@ -46,6 +42,8 @@ describe('SearchFacetFilterComponent', () => {
   const value2 = 'test2';
   const value3 = 'another value3';
   const value4 = '52d629dc-7d2f-47b9-aa2d-258b92e45ae1';
+  const value5 = 'test authority';
+  const authority = '52d629dc-7d2f-47b9-aa2d-258b92e45ae1';
   const mockFilterConfig: SearchFilterConfig = Object.assign(new SearchFilterConfig(), {
     name: filterName1,
     filterType: FilterType.text,
@@ -77,11 +75,39 @@ describe('SearchFacetFilterComponent', () => {
     label: value4,
     value: value4,
   });
+  const appliedFilter5: AppliedFilter = Object.assign(new AppliedFilter(), {
+    filter: filterName1,
+    operator: 'authority',
+    label: authority,
+    value: authority,
+  });
+  const facetValue1: FacetValue = Object.assign(new FacetValue(), {
+    label: value1,
+    value: value1,
+  });
+  const facetValue2: FacetValue = Object.assign(new FacetValue(), {
+    label: value2,
+    value: value2,
+  });
+  const facetValue3: FacetValue = Object.assign(new FacetValue(), {
+    label: value3,
+    value: value3,
+  });
+  const facetValue4: FacetValue = Object.assign(new FacetValue(), {
+    label: value5,
+    value: authority,
+  });
   const values: Partial<FacetValues> = {
     appliedFilters: [
       appliedFilter1,
       appliedFilter2,
       appliedFilter3,
+    ],
+    page: [
+      facetValue1,
+      facetValue2,
+      facetValue3,
+      facetValue4,
     ],
     pageInfo: Object.assign(new PageInfo(), {
       currentPage: 0,
@@ -109,9 +135,6 @@ describe('SearchFacetFilterComponent', () => {
         { provide: Router, useValue: router },
         { provide: RemoteDataBuildService, useValue: { aggregate: () => observableOf({}) } },
         { provide: SEARCH_CONFIG_SERVICE, useValue: searchConfigService },
-        { provide: IN_PLACE_SEARCH, useValue: false },
-        { provide: REFRESH_FILTER, useValue: new BehaviorSubject<boolean>(false) },
-        { provide: SCOPE, useValue: undefined },
       ],
       schemas: [NO_ERRORS_SCHEMA],
     }).overrideComponent(SearchFacetFilterComponent, {
@@ -251,6 +274,25 @@ describe('SearchFacetFilterComponent', () => {
 
       expect(comp.selectedAppliedFilters$).toBeObservable(cold('a', {
         a: [appliedFilter1, appliedFilter2, appliedFilter3],
+      }));
+    });
+  });
+
+  describe('when selected value has an authority', () => {
+    let selectedValues$: BehaviorSubject<AppliedFilter[]>;
+
+    beforeEach(() => {
+      selectedValues$ = new BehaviorSubject([appliedFilter5]);
+      spyOn(searchService, 'getSelectedValuesForFilter').and.returnValue(selectedValues$);
+      comp.ngOnInit();
+    });
+
+    it('should updated the label with the one of the related FacetValue', () => {
+      const expectedValue = Object.assign(appliedFilter5, {
+        label: facetValue4.label,
+      });
+      expect(comp.selectedAppliedFilters$).toBeObservable(cold('a', {
+        a: [expectedValue],
       }));
     });
   });

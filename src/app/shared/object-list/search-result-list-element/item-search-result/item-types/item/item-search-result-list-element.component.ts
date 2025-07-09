@@ -15,6 +15,11 @@ import {
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import {
+  differenceInDays,
+  differenceInMilliseconds,
+  parseISO,
+} from 'date-fns';
+import {
   combineLatest,
   Observable,
 } from 'rxjs';
@@ -31,6 +36,8 @@ import { environment } from '../../../../../../../environments/environment';
 import { DSONameService } from '../../../../../../core/breadcrumbs/dso-name.service';
 import { Context } from '../../../../../../core/shared/context.model';
 import { Item } from '../../../../../../core/shared/item.model';
+import { MetadataValueFilter } from '../../../../../../core/shared/metadata.models';
+import { PLACEHOLDER_VALUE } from '../../../../../../core/shared/metadata.utils';
 import { getFirstSucceededRemoteListPayload } from '../../../../../../core/shared/operators';
 import { ViewMode } from '../../../../../../core/shared/view-mode.model';
 import { getItemPageRoute } from '../../../../../../item-page/item-page-routing-paths';
@@ -39,11 +46,13 @@ import { KlaroService } from '../../../../../cookies/klaro.service';
 import { isNotEmpty } from '../../../../../empty.util';
 import { MetadataLinkViewComponent } from '../../../../../metadata-link-view/metadata-link-view.component';
 import { ThemedBadgesComponent } from '../../../../../object-collection/shared/badges/themed-badges.component';
+import { InWorkflowStatisticsComponent } from '../../../../../object-collection/shared/in-workflow-statistics/in-workflow-statistics.component';
 import { ItemSearchResult } from '../../../../../object-collection/shared/item-search-result.model';
 import { listableObjectComponent } from '../../../../../object-collection/shared/listable-object/listable-object.decorator';
 import { TruncatableComponent } from '../../../../../truncatable/truncatable.component';
 import { TruncatableService } from '../../../../../truncatable/truncatable.service';
 import { TruncatablePartComponent } from '../../../../../truncatable/truncatable-part/truncatable-part.component';
+import { VarDirective } from '../../../../../utils/var.directive';
 import { MetricBadgesComponent } from '../../../../metric-badges/metric-badges.component';
 import { MetricDonutsComponent } from '../../../../metric-donuts/metric-donuts.component';
 import { AdditionalMetadataComponent } from '../../../additional-metadata/additional-metadata.component';
@@ -57,7 +66,7 @@ import { SearchResultListElementComponent } from '../../../search-result-list-el
   styleUrls: ['./item-search-result-list-element.component.scss'],
   templateUrl: './item-search-result-list-element.component.html',
   standalone: true,
-  imports: [NgIf, RouterLink, ThemedThumbnailComponent, NgClass, ThemedBadgesComponent, TruncatableComponent, TruncatablePartComponent, NgFor, AsyncPipe, TranslateModule, AdditionalMetadataComponent, MetadataLinkViewComponent, MetricBadgesComponent, MetricDonutsComponent],
+  imports: [NgIf, RouterLink, ThemedThumbnailComponent, NgClass, ThemedBadgesComponent, TruncatableComponent, TruncatablePartComponent, NgFor, AsyncPipe, TranslateModule, AdditionalMetadataComponent, MetadataLinkViewComponent, MetricBadgesComponent, MetricDonutsComponent, VarDirective, InWorkflowStatisticsComponent],
 })
 /**
  * The component for displaying a list element for an item search result of the type Publication
@@ -77,6 +86,11 @@ export class ItemSearchResultListElementComponent extends SearchResultListElemen
   authorMetadata = environment.searchResult.authorMetadata;
 
   hasLoadedThirdPartyMetrics$: Observable<boolean>;
+
+  readonly placeholderFilter: MetadataValueFilter = {
+    negate: true,
+    value: PLACEHOLDER_VALUE,
+  };
 
   private thirdPartyMetrics = environment.info.metricsConsents.filter(metric => metric.enabled).map(metric => metric.key);
 
@@ -122,10 +136,19 @@ export class ItemSearchResultListElementComponent extends SearchResultListElemen
     }
   }
 
+  getDateForItem(itemStartDate: string) {
+    const itemStartDateConverted: Date = parseISO(itemStartDate);
+    const days: number = Math.floor(differenceInDays(Date.now(), itemStartDateConverted));
+    const remainingMilliseconds: number = differenceInMilliseconds(Date.now(), itemStartDateConverted) - days * 24 * 60 * 60 * 1000;
+    const hours: number = Math.floor(remainingMilliseconds / (60 * 60 * 1000));
+    return `${days} d ${hours} h`;
+  }
+
   /**
    * Prompt user for consents settings
    */
   showSettings() {
     this.klaroService.showSettings();
   }
+
 }

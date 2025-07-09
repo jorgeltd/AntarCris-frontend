@@ -1257,6 +1257,8 @@
 
   "browse.metadata.srsc": "Subject Category",
 
+  "browse.metadata.rsoTitle": "Research Outputs Title",
+
   "browse.metadata.author.breadcrumbs": "Browse by Author",
 
   "browse.metadata.dateissued.breadcrumbs": "Browse by Date",
@@ -1281,11 +1283,11 @@
 
   "browse.metadata.srsc.breadcrumbs": "Browse by Subject Category",
 
-  "browse.metadata.srsc.tree.descrption": "Select a subject to add as search filter",
+  "browse.metadata.srsc.tree.description": "Select a subject to add as search filter",
 
   "browse.metadata.nsi.breadcrumbs": "Browse by Norwegian Science Index",
 
-  "browse.metadata.nsi.tree.descrption": "Select an index to add as search filter",
+  "browse.metadata.nsi.tree.description": "Select an index to add as search filter",
 
   "browse.metadata.type.breadcrumbs": "Browse by Type",
 
@@ -1296,6 +1298,8 @@
   "pagination.previous.button": "Previous",
 
   "pagination.next.button.disabled.tooltip": "No more pages of results",
+
+  "pagination.page-number-bar": "Control bar for page navigation, relative to element with ID: ",
 
   "browse.startsWith": ", starting with {{ startsWith }}",
 
@@ -1344,8 +1348,6 @@
   "browse.startsWith.type_text": "Filter results by typing the first few letters",
 
   "browse.startsWith.input": "Filter",
-
-  "browse.taxonomy_srsc.title": "Browsing by Subject Category",
 
   "browse.taxonomy.button": "Browse",
 
@@ -1773,7 +1775,7 @@
 
   "community.edit.notifications.unauthorized": "You do not have privileges to make this change",
 
-  "community.edit.notifications.error": "An error occured while editing the community",
+  "community.edit.notifications.error": "An error occurred while editing the community",
 
   "community.edit.return": "Back",
 
@@ -1866,6 +1868,8 @@
   "community.form.title": "Name",
 
   "community.page.edit": "Edit this community",
+
+  "community.page.browse.search.head": "Search",
 
   "community.page.handle": "Permanent URI for this community",
 
@@ -2163,7 +2167,7 @@
 
   "curation.form.submit.error.head": "Running the curation task failed",
 
-  "curation.form.submit.error.content": "An error occured when trying to start the curation task.",
+  "curation.form.submit.error.content": "An error occurred when trying to start the curation task.",
 
   "curation.form.submit.error.invalid-handle": "Couldn't determine the handle for this object",
 
@@ -2182,6 +2186,8 @@
   "deny-request-copy.intro": "This message will be sent to the applicant of the request",
 
   "deny-request-copy.success": "Successfully denied item request",
+
+  "dynamic-list.load-more": "Load more",
 
   "dropdown.clear": "Clear selection",
 
@@ -2383,6 +2389,8 @@
 
   "error.recent-submissions": "Error fetching recent submissions",
 
+  "error.profile-groups": "Error retrieving profile groups",
+
   "error.search-results": "Error fetching search results",
 
   "error.invalid-search-query": "Search query is not valid. Please check <a href=\"https://solr.apache.org/guide/query-syntax-and-parsing.html\" target=\"_blank\">Solr query syntax</a> best practices for further information about this error.",
@@ -2500,8 +2508,6 @@
 
   "explore.index.has_content_in_original_bundle": "Has content in original bundle",
 
-  "explore.index.investigators": "Researchers",
-
   "explore.index.isAuthorOfPublication": "Publication's author",
 
   "explore.index.isJournalOfPublication": "Publication's journal",
@@ -2558,7 +2564,7 @@
 
   "explore.index.pjtitle": "Title",
 
-  "explore.index.projectinvestigators": "Project investigators",
+  "explore.index.projectinvestigators": "Researcher",
 
   "explore.index.rodept": "Department",
 
@@ -2571,6 +2577,8 @@
   "explore.index.title": "Title",
 
   "explore.index.type": "Type",
+
+  "explore.index.rsoTitle": "Title",
 
   "explore.search-section.infrastructure.title": "Infrastructure",
 
@@ -2605,6 +2613,8 @@
   "explore.researchoutputs.breadcrumbs": "Research Outputs",
 
   "explore.researcherprofiles.breadcrumbs": "People",
+
+  "browse.metadata.rsoTitle.breadcrumbs": "Browse by Title",
 
   "explore.title": "Explore section",
   "export-schema.process.title": "Metadata Schema Export",
@@ -2660,7 +2670,7 @@
 
   "forgot-email.form.error.head": "Error when trying to reset password",
 
-  "forgot-email.form.error.content": "An error occured when attempting to reset the password for the account associated with the following email address: {{ email }}",
+  "forgot-email.form.error.content": "An error occurred when attempting to reset the password for the account associated with the following email address: {{ email }}",
 
   "forgot-password.title": "Forgot Password",
 
@@ -2703,6 +2713,12 @@
   "form.clear-help": "Click here to remove the selected value",
 
   "form.copy": "Duplicate",
+
+  "form.date-picker.placeholder.year": "Year",
+
+  "form.date-picker.placeholder.month": "Month",
+
+  "form.date-picker.placeholder.day": "Day",
 
   "form.discard": "Discard",
 
@@ -3012,6 +3028,10 @@
 
   "item.edit.bitstreams.bundle.name": "BUNDLE: {{ name }}",
 
+  "item.edit.bitstreams.bundle.table.aria-label": "Bitstreams in the  {{ bundle }} Bundle",
+
+  "item.edit.bitstreams.bundle.tooltip": "You can move a bitstream to a different page by dropping it on the page number.",
+
   "item.edit.bitstreams.discard-button": "Discard",
 
   "item.edit.bitstreams.edit.buttons.download": "Download",
@@ -3024,7 +3044,19 @@
 
   "item.edit.bitstreams.edit.buttons.undo": "Undo changes",
 
+  "item.edit.bitstreams.edit.live.cancel": "{{ bitstream }} was returned to position {{ toIndex }} and is no longer selected.",
+
+  "item.edit.bitstreams.edit.live.clear": "{{ bitstream }} is no longer selected.",
+
+  "item.edit.bitstreams.edit.live.loading": "Waiting for move to complete.",
+
+  "item.edit.bitstreams.edit.live.select": "{{ bitstream }} is selected.",
+
+  "item.edit.bitstreams.edit.live.move": "{{ bitstream }} is now in position {{ toIndex }}.",
+
   "item.edit.bitstreams.empty": "This item doesn't contain any bitstreams. Click the upload button to create one.",
+
+  "item.edit.bitstreams.info-alert": "Bitstreams can be reordered within their bundles by holding the drag handle and moving the mouse. Alternatively, bitstreams can be moved using the keyboard in the following way: Select the bitstream by pressing enter when the bitstream's drag handle is in focus. Move the bitstream up or down using the arrow keys. Press enter again to confirm the current position of the bitstream.",
 
   "item.edit.bitstreams.headers.actions": "Actions",
 
@@ -3061,6 +3093,8 @@
   "item.edit.bitstreams.save-button": "Save",
 
   "item.edit.bitstreams.upload-button": "Upload",
+
+  "item.edit.bitstreams.load-more.link": "Load more",
 
   "item.edit.delete.cancel": "Cancel",
 
@@ -3171,6 +3205,10 @@
   "item.edit.metadata.edit.value": "Edit value",
 
   "item.edit.metadata.edit.authority.key": "Edit authority key",
+
+  "item.edit.metadata.edit.buttons.enable-free-text-editing": "Enable free-text editing",
+
+  "item.edit.metadata.edit.buttons.disable-free-text-editing": "Disable free-text editing",
 
   "item.edit.metadata.edit.buttons.confirm": "Confirm",
 
@@ -4520,6 +4558,10 @@
 
   "mydspace.results.is-correction": "Is a request of correction",
 
+  "mydspace.results.in-workflow-since": "In workflow since:",
+
+  "mydspace.results.in-workflow-for": "In workflow for:",
+
   "mydspace.search-form.placeholder": "Search in MyDSpace...",
 
   "mydspace.show.workflow": "Workflow tasks",
@@ -4744,72 +4786,6 @@
   "quality-assurance.event.project.error": "An error has occurred. No operation performed.",
 
   "quality-assurance.event.reason": "Reason",
-
-  "reciter.suggestion.loading": "Loading ...",
-
-  "reciter.suggestion.title": "Suggestions",
-
-  "reciter.suggestion.targets.description": "Below you can see all the suggestions ",
-
-  "reciter.suggestion.targets": "Current Suggestions",
-
-  "reciter.suggestion.table.name": "Researcher Name",
-
-  "reciter.suggestion.table.actions": "Actions",
-
-  "reciter.suggestion.button.review": "Review {{ total }} suggestion(s)",
-
-  "reciter.suggestion.noTargets": "No target found.",
-
-  "reciter.suggestion.target.error.service.retrieve": "An error occurred while loading the Suggestion targets",
-
-  "reciter.suggestion.evidence.type": "Type",
-
-  "reciter.suggestion.evidence.score": "Score",
-
-  "reciter.suggestion.evidence.notes": "Notes",
-
-  "reciter.suggestion.approveAndImport": "Approve & import",
-
-  "reciter.suggestion.approveAndImport.success": "The suggestion has been imported successfully. <a href='/workspaceitems/{{workspaceItemId}}/edit'>View.</a>",
-
-  "reciter.suggestion.approveAndImport.bulk": "Approve & import Selected",
-
-  "reciter.suggestion.approveAndImport.bulk.success": "{{ count }} suggestions have been imported successfully ",
-
-  "reciter.suggestion.approveAndImport.bulk.error": "{{ count }} suggestions haven't been imported due to unexpected server errors",
-
-  "reciter.suggestion.notMine": "Not mine",
-
-  "reciter.suggestion.notMine.success": "The suggestion has been discarded",
-
-  "reciter.suggestion.notMine.bulk": "Not mine Selected",
-
-  "reciter.suggestion.notMine.bulk.success": "{{ count }} suggestions have been discarded ",
-
-  "reciter.suggestion.notMine.bulk.error": "{{ count }} suggestions haven't been discarded due to unexpected server errors",
-
-  "reciter.suggestion.empty": "All the <b>{{type}}</b> suggestions in the {{source}}<br> related to your profile have been either approved or rejected.",
-
-  "reciter.suggestion.seeEvidence": "See evidence",
-
-  "reciter.suggestion.hideEvidence": "Hide evidence",
-
-  "reciter.suggestion.not-found": "No suggestion found with the given identifier.",
-
-  "reciter.suggestion.suggestionFor": "Suggestion for",
-
-  "reciter.suggestion.source.oaire": "OpenAIRE Graph",
-
-  "reciter.suggestion.source.orcidWorks": "ORCID registry",
-
-  "reciter.suggestion.from.source": "from the ",
-
-  "reciter.suggestion.totalScore": "Total Score",
-
-  "reciter.suggestion.type.oaire": "Publications",
-
-  "reciter.suggestion.type.orcidWorks": "Publications",
 
   "orgunit.listelement.badge": "Organizational Unit",
 
@@ -5046,6 +5022,8 @@
 
   "patent.listelement.badge": "Patent",
 
+  "product.page.titleprefix": "Product",
+
   "product.listelement.badge": "Product",
 
   "profile.breadcrumbs": "Update Profile",
@@ -5076,9 +5054,9 @@
 
   "profile.card.access-token.delete": "Revoke token",
 
-  "profile.card.access-token.no-token-generated": "You don't have personal access token. Generate a personal access token for quick access to the DSpace-CRIS API.",
+  "profile.card.access-token.no-token-generated": "You don't have personal access token.\n A personal access token will allow to use advanced DSpace-CRIS features ( API ) and it's related to your user.",
 
-  "profile.card.access-token.token-generated": "You have already generated a personal access token.",
+  "profile.card.access-token.token-generated": "You have already generated a personal access token.\n A personal access token will allow to use advanced DSpace-CRIS features ( API ) and it's related to your user.",
 
   "profile.card.identify": "Identify",
 
@@ -5331,7 +5309,7 @@
 
   "register-page.registration.error.head": "Error when trying to register email",
 
-  "register-page.registration.error.content": "An error occured when registering the following email address: {{ email }}",
+  "register-page.registration.error.content": "An error occurred when registering the following email address: {{ email }}",
 
   "register-page.registration.error.recaptcha": "Error when trying to authenticate with recaptcha",
 
@@ -5561,7 +5539,7 @@
 
   "search.filters.applied.f.has_content_in_original_bundle": "Has files",
 
-  "search.filters.applied.f.investigators": "Investigator",
+  "search.filters.applied.f.projectinvestigators": "Investigator",
 
   "search.filters.applied.f.original_bundle_filenames": "File name",
 
@@ -5766,11 +5744,11 @@
 
   "search.filters.filter.itemtype.label": "Search type",
 
-  "search.filters.filter.investigators.head": "Researcher",
+  "search.filters.filter.projectinvestigators.head": "Researcher",
 
-  "search.filters.filter.investigators.label": "Researcher",
+  "search.filters.filter.projectinvestigators.label": "Researcher",
 
-  "search.filters.filter.investigators.placeholder": "Researcher",
+  "search.filters.filter.projectinvestigators.placeholder": "Researcher",
 
   "search.filters.filter.jobTitle.head": "Job Title",
 
@@ -6272,6 +6250,10 @@
 
   "statistics.table.mainReports.header.item": "Item",
 
+  "statistics.table.mainReports.header.community": "Community",
+
+  "statistics.table.mainReports.header.collection": "Collection",
+
   "statistics.table.downloadReports.header.views": "Downloads",
 
   "statistics.table.downloadReports.header.continent": "Continent",
@@ -6692,6 +6674,12 @@
 
   "submission.sections.describe.relationship-lookup.external-source.import-modal.Author.title": "Import Remote Author",
 
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.isProjectOfPublication.added.new-entity": "New Entity Added!",
+
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.isProjectOfPublication.title": "Project",
+
+  "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.title": "Import Remote Author",
+
   "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.added.local-entity": "Successfully added local author to the selection",
 
   "submission.sections.describe.relationship-lookup.external-source.import-modal.isAuthorOfPublication.added.new-entity": "Successfully imported and added external author to the selection",
@@ -7042,6 +7030,8 @@
 
   "submission.sections.submit.progressbar.itemAccessConditions": "Item access conditions",
 
+  "error.validation.accessconditions.required": "You must provide a value for the access condition",
+
   "submission.sections.submit.progressbar.CClicense": "Creative commons license",
 
   "submission.sections.submit.progressbar.custom-url": "Custom url",
@@ -7091,6 +7081,8 @@
   "submission.sections.submit.progressbar.describe.stepone": "Describe",
 
   "submission.sections.submit.progressbar.describe.steptwo": "Describe",
+
+  "submission.sections.submit.progressbar.detect-duplicate": "Potential duplicates",
 
   "submission.sections.submit.progressbar.duplicates": "Potential duplicates",
 
@@ -7333,6 +7325,22 @@
   "submission.workflow.generic.submit_score": "Rate",
 
   "submission.workflow.generic.submit_score-help": "",
+
+  "submission.workflow.tasks.bulk.item.success": "Operation successful for {{itemNumber}} items",
+
+  "submission.workflow.tasks.bulk.item.error": "Skipped action for {{itemNumber}} items",
+
+  "submission.workflow.tasks.pool.claim.selected": "Claim selected",
+
+  "submission.workflow.tasks.claimed.approve.selected": "Approve selected",
+
+  "submission.workflow.tasks.claimed.reject.selected.submit": "Reject selected",
+
+  "submission.workflow.tasks.claimed.return.selected": "Return selected to pool",
+
+  "submission.workflow.tasks.pool.claim_selected_help": "Assign selected tasks to yourself.",
+
+  "submission.workflow.tasks.claimed.approve_selected_help": "Approve selected tasks.",
 
   "submission.workflow.tasks.claimed.approve": "Approve",
 
@@ -7963,6 +7971,10 @@
   "person.orcid.registry.queue": "ORCID Registry Queue",
 
   "person.orcid.registry.auth": "ORCID Authorizations",
+
+  "person.orcid-tooltip.authenticated": "{{orcid}}",
+
+  "person.orcid-tooltip.not-authenticated": "{{orcid}} (unconfirmed)",
 
   "home.recent-submissions.head": "Recent Submissions",
 
@@ -8789,6 +8801,24 @@
   "item.page.cc.license.disclaimer": "Except where otherwised noted, this item's license is described as",
 
   "browse.search-form.placeholder": "Search the repository",
+
+  "file-download-link.download": "Download ",
+
+  "register-page.registration.aria.label": "Enter your e-mail address",
+
+  "forgot-email.form.aria.label": "Enter your e-mail address",
+
+  "search-facet-option.update.announcement": "The page will be reloaded. Filter {{ filter }} is selected.",
+
+  "live-region.ordering.instructions": "Press spacebar to reorder {{ itemName }}.",
+
+  "live-region.ordering.status": "{{ itemName }}, grabbed. Current position in list: {{ index }} of  {{ length }}. Press up and down arrow keys to change position, SpaceBar to drop, Escape to cancel.",
+
+  "live-region.ordering.moved": "{{ itemName }}, moved to position {{ index }} of {{ length }}. Press up and down arrow keys to change position, SpaceBar to drop, Escape to cancel.",
+
+  "live-region.ordering.dropped": "{{ itemName }}, dropped at position {{ index }} of {{ length }}.",
+
+  "dynamic-form-array.sortable-list.label": "Sortable list",
 
   "external-login.form.email": "Enter the email",
 

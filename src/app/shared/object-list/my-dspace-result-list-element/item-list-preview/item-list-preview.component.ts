@@ -11,6 +11,7 @@ import {
   OnInit,
 } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { Observable } from 'rxjs';
 import { Context } from 'src/app/core/shared/context.model';
 import { WorkflowItem } from 'src/app/core/submission/models/workflowitem.model';
 
@@ -26,11 +27,13 @@ import { ThemedThumbnailComponent } from '../../../../thumbnail/themed-thumbnail
 import { fadeInOut } from '../../../animations/fade';
 import { MetadataLinkViewComponent } from '../../../metadata-link-view/metadata-link-view.component';
 import { ThemedBadgesComponent } from '../../../object-collection/shared/badges/themed-badges.component';
+import { InWorkflowStatisticsComponent } from '../../../object-collection/shared/in-workflow-statistics/in-workflow-statistics.component';
 import { ItemCollectionComponent } from '../../../object-collection/shared/mydspace-item-collection/item-collection.component';
 import { ItemCorrectionComponent } from '../../../object-collection/shared/mydspace-item-correction/item-correction.component';
 import { ItemSubmitterComponent } from '../../../object-collection/shared/mydspace-item-submitter/item-submitter.component';
 import { SearchResult } from '../../../search/models/search-result.model';
 import { TruncatableComponent } from '../../../truncatable/truncatable.component';
+import { TruncatableService } from '../../../truncatable/truncatable.service';
 import { TruncatablePartComponent } from '../../../truncatable/truncatable-part/truncatable-part.component';
 import { AdditionalMetadataComponent } from '../../search-result-list-element/additional-metadata/additional-metadata.component';
 
@@ -58,6 +61,7 @@ import { AdditionalMetadataComponent } from '../../search-result-list-element/ad
     MetadataLinkViewComponent,
     AdditionalMetadataComponent,
     ItemCorrectionComponent,
+    InWorkflowStatisticsComponent,
   ],
 })
 export class ItemListPreviewComponent implements OnInit {
@@ -103,6 +107,11 @@ export class ItemListPreviewComponent implements OnInit {
   @Input() showCorrection = false;
 
   /**
+   * A boolean representing if to show workflow statistics
+   */
+  @Input() showWorkflowStatistics = false;
+
+  /**
    * An object representing the duplicate match
    */
   @Input() metadataList: DuplicateMatchMetadataDetailConfig[] = [];
@@ -116,15 +125,21 @@ export class ItemListPreviewComponent implements OnInit {
 
   authorMetadata = environment.searchResult.authorMetadata;
 
+  authorMetadataLimit = environment.followAuthorityMetadataValuesLimit;
+
+  isCollapsed$: Observable<boolean>;
+
   constructor(
     @Inject(APP_CONFIG) protected appConfig: AppConfig,
     public dsoNameService: DSONameService,
+    public truncateService: TruncatableService,
   ) {
   }
 
   ngOnInit(): void {
     this.showThumbnails = this.showThumbnails ?? this.appConfig.browseBy.showThumbnails;
     this.dsoTitle = this.dsoNameService.getHitHighlights(this.object, this.item);
+    this.isCollapsed$ = this.truncateService.isCollapsed(this.item.uuid);
   }
 
 }
