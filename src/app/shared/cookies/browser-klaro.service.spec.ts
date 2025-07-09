@@ -12,8 +12,10 @@ import { ConfigurationDataService } from '../../core/data/configuration-data.ser
 import { EPersonDataService } from '../../core/eperson/eperson-data.service';
 import { EPerson } from '../../core/eperson/models/eperson.model';
 import { CookieService } from '../../core/services/cookie.service';
+import { NativeWindowService } from '../../core/services/window.service';
 import { ConfigurationProperty } from '../../core/shared/configuration-property.model';
 import { MetadataValue } from '../../core/shared/metadata.models';
+import { NativeWindowMockFactory } from '../mocks/mock-native-window-ref';
 import { getMockTranslateService } from '../mocks/translate.service.mock';
 import {
   createFailedRemoteDataObject$,
@@ -80,6 +82,10 @@ describe('BrowserKlaroService', () => {
       providers: [
         BrowserKlaroService,
         {
+          provide: NativeWindowService,
+          useFactory: NativeWindowMockFactory,
+        },
+        {
           provide: TranslateService,
           useValue: translateService,
         },
@@ -108,7 +114,7 @@ describe('BrowserKlaroService', () => {
 
     mockConfig = {
       translations: {
-        zz: {
+        zy: {
           purposes: {},
           test: {
             testeritis: testKey,
@@ -166,8 +172,8 @@ describe('BrowserKlaroService', () => {
 
   it('addAppMessages', () => {
     service.addAppMessages();
-    expect(mockConfig.translations.zz[appName]).toBeDefined();
-    expect(mockConfig.translations.zz.purposes[purpose]).toBeDefined();
+    expect(mockConfig.translations.zy[appName]).toBeDefined();
+    expect(mockConfig.translations.zy.purposes[purpose]).toBeDefined();
   });
 
   it('translateConfiguration', () => {

@@ -18,16 +18,30 @@ import {
 } from './item-page-routing-paths';
 import { OrcidPageComponent } from './orcid-page/orcid-page.component';
 import { orcidPageGuard } from './orcid-page/orcid-page.guard';
+import { signpostingLinksResolver } from './simple/link-resolver/signposting-links.resolver';
 import { ThemedItemPageComponent } from './simple/themed-item-page.component';
 import { versionResolver } from './version-page/version.resolver';
 import { VersionPageComponent } from './version-page/version-page/version-page.component';
 
 export const ROUTES: Route[] = [
   {
+    path: 'version',
+    children: [
+      {
+        path: ':id',
+        component: VersionPageComponent,
+        resolve: {
+          dso: versionResolver,
+        },
+      },
+    ],
+  },
+  {
     path: ':id',
     resolve: {
       dso: itemPageResolver,
       breadcrumb: itemBreadcrumbResolver,
+      links: signpostingLinksResolver,
     },
     runGuardsAndResolvers: 'always',
     children: [
@@ -76,7 +90,8 @@ export const ROUTES: Route[] = [
         public: [{
           id: 'statistics_item_:id',
           active: true,
-          visible: false,
+          visible: true,
+          parentID: 'statistics',
           index: 2,
           model: {
             type: MenuItemType.LINK,
@@ -88,16 +103,5 @@ export const ROUTES: Route[] = [
       showSocialButtons: true,
     },
   },
-  {
-    path: 'version',
-    children: [
-      {
-        path: ':id',
-        component: VersionPageComponent,
-        resolve: {
-          dso: versionResolver,
-        },
-      },
-    ],
-  },
+
 ];

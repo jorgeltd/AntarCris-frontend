@@ -8,6 +8,7 @@ import {
 } from '@angular/common';
 import {
   Component,
+  ElementRef,
   EventEmitter,
   Input,
   OnChanges,
@@ -15,6 +16,7 @@ import {
   OnInit,
   Output,
   SimpleChanges,
+  ViewChild,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
@@ -30,6 +32,7 @@ import { VocabularyEntryDetail } from '../../../core/submission/vocabularies/mod
 import { VocabularyOptions } from '../../../core/submission/vocabularies/models/vocabulary-options.model';
 import { AlertComponent } from '../../alert/alert.component';
 import { AlertType } from '../../alert/alert-type';
+import { BtnDisabledDirective } from '../../btn-disabled.directive';
 import {
   hasValue,
   isEmpty,
@@ -65,10 +68,16 @@ export type VocabularyTreeItemType = FormFieldMetadataValueObject | VocabularyEn
     AsyncPipe,
     ThemedLoadingComponent,
     AlertComponent,
+    BtnDisabledDirective,
   ],
   standalone: true,
 })
 export class VocabularyTreeviewComponent implements OnDestroy, OnInit, OnChanges {
+
+  /**
+   * Implemented to manage focus on input
+   */
+  @ViewChild('searchInput') searchInput!: ElementRef;
 
   /**
    * The {@link VocabularyOptions} object
@@ -99,6 +108,12 @@ export class VocabularyTreeviewComponent implements OnDestroy, OnInit, OnChanges
    * The vocabulary entries already selected, if any
    */
   @Input() selectedItems: VocabularyTreeItemType[] = [];
+
+  /**
+   * Whether to load all available nodes
+   */
+  @Input() loadAllNodes = false;
+
 
   /**
    * A map containing the current node showed by the tree
@@ -255,7 +270,7 @@ export class VocabularyTreeviewComponent implements OnDestroy, OnInit, OnChanges
     this.loading = this.vocabularyTreeviewService.isLoading();
 
     const entryId: string = (this.selectedItems?.length > 0) ? this.getEntryId(this.selectedItems[0]) : null;
-    this.vocabularyTreeviewService.initialize(this.vocabularyOptions, new PageInfo(), this.getSelectedEntryIds(), entryId);
+    this.vocabularyTreeviewService.initialize(this.vocabularyOptions, new PageInfo(), this.getSelectedEntryIds(), entryId, this.loadAllNodes);
   }
 
   /**
@@ -279,7 +294,7 @@ export class VocabularyTreeviewComponent implements OnDestroy, OnInit, OnChanges
    * @param node The TreeviewFlatNode for which to load children nodes
    */
   loadChildren(node: TreeviewFlatNode) {
-    this.vocabularyTreeviewService.loadMore(node.item, this.getSelectedEntryIds(), true);
+    this.vocabularyTreeviewService.loadMore(node.item, this.getSelectedEntryIds(), true, this.loadAllNodes);
   }
 
   /**
@@ -330,6 +345,9 @@ export class VocabularyTreeviewComponent implements OnDestroy, OnInit, OnChanges
       this.nodeMap = this.storedNodeMap;
       this.storedNodeMap = new Map<string, TreeviewFlatNode>();
       this.vocabularyTreeviewService.restoreNodes();
+    }
+    if (this.searchInput) {
+      this.searchInput.nativeElement.focus();
     }
   }
 
