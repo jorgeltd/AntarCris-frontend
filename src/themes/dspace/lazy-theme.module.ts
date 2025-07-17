@@ -11,7 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { RootModule } from '../../app/root.module';
-
+import { HomePageComponent } from './app/home-page/home-page.component';
 
 
 const DECLARATIONS = [
@@ -31,6 +31,7 @@ const DECLARATIONS = [
     StoreRouterConnectingModule,
     TranslateModule,
     FormsModule,
+    HomePageComponent,
   ],
   declarations: DECLARATIONS,
 })
