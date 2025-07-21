@@ -21,12 +21,18 @@ import { FileSectionComponent } from './app/item-page/simple/field-components/fi
 import { ItemPageTitleFieldComponent } from './app/item-page/simple/field-components/specific-field/title/item-page-title-field.component';
 import { ItemPageComponent } from './app/item-page/simple/item-page.component';
 import { MetadataRepresentationListComponent } from './app/item-page/simple/metadata-representation-list/metadata-representation-list.component';
+import { PageNotFoundComponent } from './app/pagenotfound/pagenotfound.component';
+import { PageErrorComponent } from './app/page-error/page-error.component';
+import { PageInternalServerErrorComponent } from './app/page-internal-server-error/page-internal-server-error.component';
 import { RootModule } from '../../app/root.module';
 import { HomePageComponent } from './app/home-page/home-page.component';
 
 
 const DECLARATIONS = [
     ItemPageComponent,
+    PageNotFoundComponent,
+    PageErrorComponent,
+    PageInternalServerErrorComponent,
     FullItemPageComponent,
     ItemAlertsComponent,
     ItemStatusComponent,
