@@ -29,11 +29,14 @@ import { ImpersonateNavbarComponent } from '../../../../app/shared/impersonate-n
   standalone: true,
   imports: [NgbDropdownModule, ThemedLangSwitchComponent, RouterLink, ThemedSearchNavbarComponent, ContextHelpToggleComponent, ThemedAuthNavMenuComponent, ImpersonateNavbarComponent, ThemedNavbarComponent, TranslateModule, AsyncPipe, NgIf],
 })
+
 export class HeaderComponent extends BaseComponent implements OnInit {
   public isNavBarCollapsed$: Observable<boolean>;
+  public isHomePage$: boolean;
 
   ngOnInit() {
     super.ngOnInit();
     this.isNavBarCollapsed$ = this.menuService.isMenuCollapsed(this.menuID);
   }
+
 }
