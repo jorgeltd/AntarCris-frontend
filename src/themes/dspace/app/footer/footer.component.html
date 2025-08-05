@@ -3,25 +3,25 @@
     <ds-text-section *ngIf="hasSiteFooterSections" [sectionId]="'site'" [textRowSection]=section [site]="(site | async)"></ds-text-section>
     <div *ngIf="!hasSiteFooterSections" class=" container p-4">
       <!--Logos de instituciones-->
-      <h5 class="text-uppercase"> Instituciones asociadas</h5>
+      <h3 class="text-uppercase"> Instituciones asociadas</h3>
       <div class="row">
-        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-           <img src="assets/dspace/images/Logo_Nodo.png" alt="{{ 'footer.link.4science' | translate}}" />
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 align-items-center justify-content-center">
+           <img class="img-fluid w-75 h-auto"src="assets/dspace/images/nodo_logo.png" alt="{{ 'footer.link.4science' | translate}}" />
         </div>
-        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-           <img src="assets/dspace/images/Logo_INACH_Oficial.jpg" alt="{{ 'footer.link.4science' | translate}}" />
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 align-items-center justify-content-center">
+           <img class="img-fluid w-75 h-auto" src="assets/dspace/images/inach_logo.png" alt="{{ 'footer.link.4science' | translate}}" />
         </div>
-        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-           <img src="assets/dspace/images/Logo_UMAG.png" alt="{{ 'footer.link.4science' | translate}}" />
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 align-items-center justify-content-center">
+           <img class="img-fluid w-100 h-auto" src="assets/dspace/images/umag_logo.png" alt="{{ 'footer.link.4science' | translate}}" />
         </div>
-        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-           <img src="assets/dspace/images/Logo_BASE.png" alt="{{ 'footer.link.4science' | translate}}" />
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 align-items-center justify-content-center">
+           <img class="img-fluid w-100 h-auto" src="assets/dspace/images/base_logo.png" alt="{{ 'footer.link.4science' | translate}}" />
         </div>
-        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-           <img src="assets/dspace/images/Logo_IDEAL.jpg" alt="{{ 'footer.link.4science' | translate}}" />
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 align-items-center justify-content-center">
+           <img class="img-fluid w-100 h-auto" src="assets/dspace/images/uach_logo.png" alt="{{ 'footer.link.4science' | translate}}" />
         </div>
-        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-           <img src="assets/dspace/images/Logo_ANID.png" alt="{{ 'footer.link.4science' | translate}}" />
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 align-items-center justify-content-center">
+           <img class="img-fluid w-75 h-auto" src="assets/dspace/images/anid_logo.png" alt="{{ 'footer.link.4science' | translate}}" />
         </div>
       </div>
     </div>
