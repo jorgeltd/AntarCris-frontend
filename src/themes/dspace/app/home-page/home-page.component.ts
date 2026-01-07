@@ -21,6 +21,7 @@ import { ViewTrackerComponent } from '../../../../app/statistics/angulartics/dsp
 import { HeroComponent } from './hero/hero.component';
 import { ResearchLinesComponent } from './research-lines/research-lines.component';
 import { SustainableGoalsComponent } from './sustainable-goals/sustainable-goals.component';
+import { YearProductionSummaryComponent } from './year-production-summary/year-production-summary.component';
 
 @Component({
   selector: 'ds-themed-home-page',
@@ -48,6 +49,7 @@ import { SustainableGoalsComponent } from './sustainable-goals/sustainable-goals
     HeroComponent,
     ResearchLinesComponent,
     SustainableGoalsComponent,
+    YearProductionSummaryComponent,
   ],
 })
 export class HomePageComponent extends BaseComponent {
