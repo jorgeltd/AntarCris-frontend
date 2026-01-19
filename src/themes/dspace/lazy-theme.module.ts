@@ -10,6 +10,8 @@ import { StoreModule } from '@ngrx/store';
 import { TranslateModule } from '@ngx-translate/core';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
+import { RootModule } from '../../app/root.module';
+import { HomePageComponent } from './app/home-page/home-page.component';
 import { ItemAlertsComponent } from './app/item-page/alerts/item-alerts.component';
 import { ItemStatusComponent } from './app/item-page/edit-item-page/item-status/item-status.component';
 import { FullFileSectionComponent } from './app/item-page/full/field-components/file-section/full-file-section.component';
@@ -21,40 +23,38 @@ import { FileSectionComponent } from './app/item-page/simple/field-components/fi
 import { ItemPageTitleFieldComponent } from './app/item-page/simple/field-components/specific-field/title/item-page-title-field.component';
 import { ItemPageComponent } from './app/item-page/simple/item-page.component';
 import { MetadataRepresentationListComponent } from './app/item-page/simple/metadata-representation-list/metadata-representation-list.component';
-import { PageNotFoundComponent } from './app/pagenotfound/pagenotfound.component';
 import { PageErrorComponent } from './app/page-error/page-error.component';
 import { PageInternalServerErrorComponent } from './app/page-internal-server-error/page-internal-server-error.component';
+import { PageNotFoundComponent } from './app/pagenotfound/pagenotfound.component';
 import { ConfigurationSearchPageComponent } from './app/search-page/configuration-search-page.component';
 import { SearchPageComponent } from './app/search-page/search-page.component';
+import { CountersSectionComponent } from './app/shared/explore/section-component/counters-section/counters-section.component';
 import { CollectionStatisticsPageComponent } from './app/statistics-page/collection-statistics-page/collection-statistics-page.component';
 import { CommunityStatisticsPageComponent } from './app/statistics-page/community-statistics-page/community-statistics-page.component';
 import { ItemStatisticsPageComponent } from './app/statistics-page/item-statistics-page/item-statistics-page.component';
 import { SiteStatisticsPageComponent } from './app/statistics-page/site-statistics-page/site-statistics-page.component';
 
-import { RootModule } from '../../app/root.module';
-import { HomePageComponent } from './app/home-page/home-page.component';
-
 const DECLARATIONS = [
-    SearchPageComponent,
-    ConfigurationSearchPageComponent,
-    ItemPageComponent,
-    PageNotFoundComponent,
-    PageErrorComponent,
-    PageInternalServerErrorComponent,
-    FullItemPageComponent,
-    ItemAlertsComponent,
-    ItemStatusComponent,
-    FullFileSectionComponent,
-    MetadataRepresentationListComponent,
-    MediaViewerComponent,
-    MediaViewerImageComponent,
-    MediaViewerVideoComponent,
-    FileSectionComponent,
-    ItemPageTitleFieldComponent,
-    CollectionStatisticsPageComponent,
-    CommunityStatisticsPageComponent,
-    ItemStatisticsPageComponent,
-    SiteStatisticsPageComponent,
+  SearchPageComponent,
+  ConfigurationSearchPageComponent,
+  ItemPageComponent,
+  PageNotFoundComponent,
+  PageErrorComponent,
+  PageInternalServerErrorComponent,
+  FullItemPageComponent,
+  ItemAlertsComponent,
+  ItemStatusComponent,
+  FullFileSectionComponent,
+  MetadataRepresentationListComponent,
+  MediaViewerComponent,
+  MediaViewerImageComponent,
+  MediaViewerVideoComponent,
+  FileSectionComponent,
+  ItemPageTitleFieldComponent,
+  CollectionStatisticsPageComponent,
+  CommunityStatisticsPageComponent,
+  ItemStatisticsPageComponent,
+  SiteStatisticsPageComponent,
 ];
 
 @NgModule({
@@ -72,6 +72,7 @@ const DECLARATIONS = [
     TranslateModule,
     FormsModule,
     HomePageComponent,
+    CountersSectionComponent,
     ...DECLARATIONS,
   ],
   //declarations: DECLARATIONS,
