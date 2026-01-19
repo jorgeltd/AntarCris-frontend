@@ -15,7 +15,7 @@
 
 <ng-container *ngIf="site$.value">
 
-  <ds-hero></ds-hero>
+  <ds-hero [sectionComponents]="sectionComponents"></ds-hero>
   <ds-year-production-summary></ds-year-production-summary>
   <div class="bg-gray py-2">
     <ds-research-lines></ds-research-lines>

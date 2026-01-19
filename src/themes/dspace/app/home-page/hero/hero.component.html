@@ -25,6 +25,21 @@
     <div class="banner-search">
       <ds-search-section [sectionId]="sectionId" [searchSection]="searchSection"></ds-search-section>
     </div>
+    <div class="banner-counters">
+      <ng-container *ngFor="let sectionComponentRow of ( sectionComponents | async )">
+        <ng-container *ngFor="let sectionComponent of sectionComponentRow"
+          [ngSwitch]="sectionComponent.componentType">
+          <div *ngSwitchCase="'counters'" class="counters-container">
+            <div [class]="componentClass(sectionComponent)" class="col-md-12">
+              <div class="col-md-12 counters-section">
+                <ds-counters-section [sectionId]="sectionId"
+                  [countersSection]="$any(sectionComponent)"></ds-counters-section>
+                </div>
+              </div>
+            </div>
+        </ng-container>
+      </ng-container>
+    </div>
   </div>
 
 </div>
