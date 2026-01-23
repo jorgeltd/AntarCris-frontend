@@ -2544,6 +2544,8 @@
 
   "explore.index.knowsLanguage": "Knows languages",
 
+  "explore.index.ods": "Sustainable Development Goals",
+
   "explore.index.organization": "Organization",
 
   "explore.index.organizationAddressCountry": "Organization address country",
@@ -2559,6 +2561,8 @@
   "explore.index.original_bundle_filenames": "Original bundle filenames",
 
   "explore.index.ouname": "Name",
+
+  "explore.index.procien_lines": "Procien Lines",
 
   "explore.index.projectOrgUnits": "Organizations",
 
@@ -5541,6 +5545,10 @@
 
   "search.filters.applied.f.has_content_in_original_bundle": "Has files",
 
+  "search.filters.applied.f.ods": "Sustainable Development Goals",
+
+  "search.filters.applied.f.procien_lines": "Procien Lines",
+
   "search.filters.applied.f.projectinvestigators": "Investigator",
 
   "search.filters.applied.f.original_bundle_filenames": "File name",
@@ -5769,6 +5777,18 @@
   "search.filters.filter.language.label": "Language",
 
   "search.filters.filter.language.placeholder": "Language",
+
+  "search.filters.filter.procien_lines.head": "Procien Lines",
+
+  "search.filters.filter.procien_lines.placeholder": "Procien Lines",
+
+  "search.filters.filter.procien_lines.label": "Procien Lines",
+
+  "search.filters.filter.ods.head": "Sustainable Development Goals",
+
+  "search.filters.filter.ods.placeholder": "Sustainable Development Goals",
+
+  "search.filters.filter.ods.label": "Sustainable Development Goals",
 
   "search.filters.filter.projectOrgUnits.head": "Organizations",
 

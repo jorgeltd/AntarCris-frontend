@@ -2837,6 +2837,12 @@
   // "error.validation.metadata.qualifier.max-length": "This field may not contain more than 64 characters",
   "error.validation.metadata.qualifier.max-length": "Este campo no puede contener mas de 64 caracteres",
 
+  // "explore.index.ods": "Sustainable Development Goals",
+  "explore.index.ods": "Objetivos de Desarrollo Sostenible",
+
+  // "explore.index.procien_lines": "Procien lines",
+  "explore.index.procien_lines": "Lineas Procien",
+
   // "feed.description": "Syndication feed",
   "feed.description": "Hilo de sindicación",
 
@@ -6560,6 +6566,12 @@
   // "search.filters.applied.f.withdrawn": "Withdrawn",
   "search.filters.applied.f.withdrawn": "Retirado",
 
+  // "search.filters.applied.f.ods": "Sustainable Development Goals",
+  "search.filters.applied.f.ods": "Objetivos de Desarrollo Sostenible",
+
+  // "search.filters.applied.f.procien_lines": "Procien Lines",
+  "search.filters.applied.f.procien_lines": "Lineas Procien",
+
   // "search.filters.applied.operator.equals": "",
   "search.filters.applied.operator.equals": "",
 
@@ -6688,6 +6700,24 @@
 
   // "search.filters.filter.expand": "Expand filter",
   "search.filters.filter.expand": "Expandir filtro",
+
+  // "search.filters.filter.procien_lines.head": "Procien Lines",
+  "search.filters.filter.procien_lines.head": "Lineas Procien",
+
+  // "search.filters.filter.procien_lines.placeholder": "Procien Lines",
+  "search.filters.filter.procien_lines.placeholder": "Lineas Procien",
+
+  // "search.filters.filter.procien_lines.label": "Procien Lines",
+  "search.filters.filter.procien_lines.label": "Lineas Procien",
+
+  // "search.filters.filter.ods.head": "Sustainable Development Goals",
+  "search.filters.filter.ods.head": "Objetivos de Desarrollo Sostenible",
+
+  // "search.filters.filter.ods.placeholder": "Sustainable Development Goals",
+  "search.filters.filter.ods.placeholder": "Objetivos de Desarrollo Sostenible",
+
+  // "search.filters.filter.ods.label": "Sustainable Development Goals",
+  "search.filters.filter.ods.label": "Objetivos de Desarrollo Sostenible",
 
   // "search.filters.filter.has_content_in_original_bundle.head": "Has files",
   "search.filters.filter.has_content_in_original_bundle.head": "Tiene archivos",
