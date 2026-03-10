@@ -10260,5 +10260,8 @@
 
   "menu.section.explore_researcherprofiles": "Personas",
 
-  "menu.section.explore_orgunits": "Instituciones"
+  "menu.section.explore_orgunits": "Instituciones",
+
+  "layout.tab.header.Person.otherinfo": "Resúmen profesional",
+
 }
