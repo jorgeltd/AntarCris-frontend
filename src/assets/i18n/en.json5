@@ -5615,6 +5615,8 @@
 
   "search.filters.applied.charts.site.title": "Search Output",
 
+  "search.filters.applied.charts.RELATION.OrgUnit.rpprojects.title": "Projects",
+
   "search.filters.applied.charts.RELATION.OrgUnit.rppublications.title": "Research Output",
 
   "search.filters.applied.charts.RELATION.Person.projects.title": "Projects",

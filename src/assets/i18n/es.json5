@@ -9844,6 +9844,24 @@
   // "search.filters.applied.f.relateditem": "Related items",
   "search.filters.applied.f.relateditem": "Ítems relacionados",
 
+  // "search.filters.applied.charts.RELATION.OrgUnit.rpprojects.title": "Projects",
+  "search.filters.applied.charts.RELATION.OrgUnit.rpprojects.title": "Proyectos",
+
+  // "search.filters.applied.charts.graphprojdate.tab": "Visualization by Project Date",
+  "search.filters.applied.charts.graphprojdate.tab": "Visualización por Fecha de Proyecto",
+
+  // "search.filters.applied.charts.graphpubldate.tab": "Visualization by Date",
+  "search.filters.applied.charts.graphpubldate.tab": "Visualización por Fecha",
+
+  // "search.filters.applied.charts.graphresearchline.tab": "Visualization by Research Line",
+  "search.filters.applied.charts.graphresearchline.tab": "Visualización por Linea de Investigación",
+
+  // "search.filters.applied.charts.RELATION.OrgUnit.rppublications.title": "Research Output",
+  "search.filters.applied.charts.RELATION.OrgUnit.rppublications.title": "Publicaciones",
+
+  // "search.filters.applied.charts.RELATION.Person.projects.title": "Projects",
+  "search.filters.applied.charts.RELATION.Person.projects.title": "Proyectos",
+
   // "search.filters.applied.f.ldn_service": "LDN Service",
   "search.filters.applied.f.ldn_service": "Servicio LDN",
 
