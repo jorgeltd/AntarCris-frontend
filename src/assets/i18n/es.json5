@@ -1670,6 +1670,12 @@
   // "claimed-declined-task-search-result-list-element.title": "Declined, sent back to Review Manager's workflow",
   "claimed-declined-task-search-result-list-element.title": "Declinado, enviar de vuelta al Administrador de Revisión del flujo de trabajo",
 
+  // "collaborations.table.header.country": "Country",
+  "collaborations.table.header.country": "País",
+
+  // "collaborations.table.header.publications": "Number of publications",
+  "collaborations.table.header.publications": "N° Publicaciones",
+
   // "collection.create.breadcrumbs": "Create collection",
   "collection.create.breadcrumbs": "Crear colección",
 

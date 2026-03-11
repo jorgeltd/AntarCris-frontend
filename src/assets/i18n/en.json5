@@ -1391,6 +1391,10 @@
 
   "claimed-declined-task-search-result-list-element.title": "Declined, sent back to Review Manager's workflow",
 
+  "collaborations.table.header.country": "Country",
+
+  "collaborations.table.header.publications": "Number of publications",
+
   "collection.create.breadcrumbs": "Create collection",
 
   "collection.browse.logo": "Browse for a collection logo",
