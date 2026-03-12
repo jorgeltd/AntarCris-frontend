@@ -5744,11 +5744,25 @@
 
   "search.filters.filter.itemtype.label": "Search type",
 
+  "search.filters.filter.projectEndDate.head": "End date",
+
+  "search.filters.filter.projectStartDate.max.label": "End",
+
+  "search.filters.filter.projectEndDate.min.label": "Start",
+
   "search.filters.filter.projectinvestigators.head": "Researcher",
 
   "search.filters.filter.projectinvestigators.label": "Researcher",
 
   "search.filters.filter.projectinvestigators.placeholder": "Researcher",
+
+  "search.filters.filter.projectStartDate.head": "Start date",
+
+  "search.filters.filter.projectStartDate.max.label": "End",
+
+  " search.filters.filter.projectStartDate.min.label": "Start,
+
+  "search.filters.filter.projectResearchLine.head": "Procien research line",
 
   "search.filters.filter.jobTitle.head": "Job Title",
 
