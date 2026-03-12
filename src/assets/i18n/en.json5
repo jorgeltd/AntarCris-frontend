@@ -2566,7 +2566,7 @@
 
   "explore.index.ouname": "Name",
 
-  "explore.index.procien_lines": "Procien Lines",
+  "explore.index.procien_lines": "Procien research line",
 
   "explore.index.projectOrgUnits": "Organizations",
 
@@ -5551,7 +5551,7 @@
 
   "search.filters.applied.f.ods": "Sustainable Development Goals",
 
-  "search.filters.applied.f.procien_lines": "Procien Lines",
+  "search.filters.applied.f.procien_lines": "Procien research line",
 
   "search.filters.applied.f.projectinvestigators": "Investigator",
 
@@ -5768,11 +5768,25 @@
 
   "search.filters.filter.itemtype.label": "Search type",
 
+  "search.filters.filter.projectEndDate.head": "End date",
+
+  "search.filters.filter.projectEndDate.min.label": "Start",
+
+  "search.filters.filter.projectEndDate.max.label": "End",
+
   "search.filters.filter.projectinvestigators.head": "Researcher",
 
   "search.filters.filter.projectinvestigators.label": "Researcher",
 
   "search.filters.filter.projectinvestigators.placeholder": "Researcher",
+
+  "search.filters.filter.projectStartDate.head": "Start date",
+
+  "search.filters.filter.projectStartDate.max.label": "End",
+
+  "search.filters.filter.projectStartDate.min.label": "Start",
+
+  "search.filters.filter.projectResearchLine.head": "Procien research line",
 
   "search.filters.filter.jobTitle.head": "Job Title",
 
@@ -5792,11 +5806,11 @@
 
   "search.filters.filter.language.placeholder": "Language",
 
-  "search.filters.filter.procien_lines.head": "Procien Lines",
+  "search.filters.filter.procien_lines.head": "Procien research line",
 
-  "search.filters.filter.procien_lines.placeholder": "Procien Lines",
+  "search.filters.filter.procien_lines.placeholder": "Procien research line",
 
-  "search.filters.filter.procien_lines.label": "Procien Lines",
+  "search.filters.filter.procien_lines.label": "Procien research line",
 
   "search.filters.filter.ods.head": "Sustainable Development Goals",
 
