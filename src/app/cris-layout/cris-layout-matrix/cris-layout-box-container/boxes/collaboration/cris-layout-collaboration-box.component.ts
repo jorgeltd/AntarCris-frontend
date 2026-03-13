@@ -76,7 +76,9 @@ export class CrisLayoutCollaborationBoxComponent extends CrisLayoutBoxModelCompo
     super.ngOnInit();
 
     this.searchFilter = `scope=${this.item.id}`;
-    this.http.get<any[]>(`${this.baseUrl}/api/nodo/collaborations?sort=dc.date.issued,DESC&page=0&scope=${this.item.id}`)
+    const entityType = this.item.entityType;
+    const configuration = entityType === "OrgUnit" ? "RELATION.OrgUnit.rppublications" : "RELATION.Person.researchoutputs";
+    this.http.get<any[]>(`${this.baseUrl}/api/nodo/collaborations?sort=dc.date.issued,DESC&page=0&scope=${this.item.id}&entitytype=${entityType}&configuration=${configuration}`)
     .pipe(
       catchError((error) => {
         console.error('Error fetching collaborations');
