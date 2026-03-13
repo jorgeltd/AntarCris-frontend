@@ -9105,7 +9105,7 @@
   "layout.field.label.Project.[dc.subject]": "Keywords",
   "layout.field.label.Project.[oairecerif.acronym]": "Acronym",
   "layout.field.label.Project.[dc.title]": "Project Title",
-  "layout.field.label.Project.[crispj.coordinator]": "Consortium Coordinator",
+  "layout.field.label.Project.[crispj.coordinator]": "Implementing institution",
   "layout.field.label.Project.[crispj.partnerou]": "Partner Organisations",
   "layout.field.label.Project.[oairecerif.internalid]": "Internal ID",
   "layout.field.label.Project.[crispj.investigator]": "Principal Investigator",
