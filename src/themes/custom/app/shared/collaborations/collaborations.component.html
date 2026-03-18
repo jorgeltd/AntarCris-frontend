@@ -1,0 +1,26 @@
+@if (loading) {
+  <div class="alert alert-info w-100 text-center">
+    {{ 'collaborations.loading' | translate }}
+  </div>
+}
+
+@if (!loading && (!collaborations || collaborations.length === 0)) {
+  <div class="aspect-ratio-16-9 w-100">
+    <div class="alert alert-info w-100 text-center" role="alert">
+      {{ 'collaborations.no-data' | translate }}
+    </div>
+  </div>
+}
+
+@if (chartLoaded) {
+  <div class="overflow-auto w-100" data-test="google-chart-ref">
+    <div class="aspect-ratio-16-9 overflow-hidden border">
+      <google-chart id="visualization" #googleChartRef [data]="geoChart"></google-chart>
+    </div>
+      @if (showCollaborationsTable) {
+      <div class="mt-4">
+        <ds-collaborations-table [collaborations]="publicationsByCountry"></ds-collaborations-table>
+      </div>
+    }
+  </div>
+}

@@ -230,6 +230,8 @@ export class ThemedConfigurationSearchPageComponent extends ThemedComponent<Conf
     'hideScopeInUrl',
     'customEvent',
     'customData',
+    'showCharts',
+    'showChartsToggle',
   ];
 
   protected getComponentName(): string {

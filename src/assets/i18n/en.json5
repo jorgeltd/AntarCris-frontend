@@ -1391,6 +1391,10 @@
 
   "claimed-declined-task-search-result-list-element.title": "Declined, sent back to Review Manager's workflow",
 
+  "collaborations.table.header.country": "Country",
+
+  "collaborations.table.header.publications": "Number of publications",
+
   "collection.create.breadcrumbs": "Create collection",
 
   "collection.browse.logo": "Browse for a collection logo",
@@ -2453,6 +2457,8 @@
 
   "explore.browse-section.title": "Browse",
 
+  "explore.counters-section.orgunit": "Organizations",
+
   "explore.counters-section.rprofiles": "People",
 
   "explore.counters-section.publications": "Research outputs",
@@ -2542,6 +2548,8 @@
 
   "explore.index.knowsLanguage": "Knows languages",
 
+  "explore.index.ods": "Sustainable Development Goals",
+
   "explore.index.organization": "Organization",
 
   "explore.index.organizationAddressCountry": "Organization address country",
@@ -2557,6 +2565,8 @@
   "explore.index.original_bundle_filenames": "Original bundle filenames",
 
   "explore.index.ouname": "Name",
+
+  "explore.index.procien_lines": "Procien research line",
 
   "explore.index.projectOrgUnits": "Organizations",
 
@@ -5539,6 +5549,10 @@
 
   "search.filters.applied.f.has_content_in_original_bundle": "Has files",
 
+  "search.filters.applied.f.ods": "Sustainable Development Goals",
+
+  "search.filters.applied.f.procien_lines": "Procien research line",
+
   "search.filters.applied.f.projectinvestigators": "Investigator",
 
   "search.filters.applied.f.original_bundle_filenames": "File name",
@@ -5591,15 +5605,25 @@
 
   "search.filters.applied.charts.graphitemtype.tab": "Visualization by Type",
 
+  "search.filters.applied.charts.graphprojdate.tab": "Visualization by Project Date",
+
   "search.filters.applied.charts.graphpubldate.tab": "Visualization by Date",
 
   "search.filters.applied.charts.graphpubldateltr.tab": "Visualization Demo LTR",
 
   "search.filters.applied.charts.graphpubldatetrl.tab": "Visualization Demo RTL",
 
+  "search.filters.applied.charts.graphresearchline.tab": "Visualization by Research Line",
+
   "search.filters.applied.charts.default.title": "Search Output",
 
   "search.filters.applied.charts.site.title": "Search Output",
+
+  "search.filters.applied.charts.RELATION.OrgUnit.rpprojects.title": "Projects",
+
+  "search.filters.applied.charts.RELATION.OrgUnit.rppublications.title": "Research Output",
+
+  "search.filters.applied.charts.RELATION.Person.projects.title": "Projects",
 
   "search.filters.applied.charts.RELATION.Person.researchoutputs.title": "Research Output",
 
@@ -5744,11 +5768,25 @@
 
   "search.filters.filter.itemtype.label": "Search type",
 
+  "search.filters.filter.projectEndDate.head": "End date",
+
+  "search.filters.filter.projectEndDate.min.label": "Start",
+
+  "search.filters.filter.projectEndDate.max.label": "End",
+
   "search.filters.filter.projectinvestigators.head": "Researcher",
 
   "search.filters.filter.projectinvestigators.label": "Researcher",
 
   "search.filters.filter.projectinvestigators.placeholder": "Researcher",
+
+  "search.filters.filter.projectStartDate.head": "Start date",
+
+  "search.filters.filter.projectStartDate.max.label": "End",
+
+  "search.filters.filter.projectStartDate.min.label": "Start",
+
+  "search.filters.filter.projectResearchLine.head": "Procien research line",
 
   "search.filters.filter.jobTitle.head": "Job Title",
 
@@ -5767,6 +5805,18 @@
   "search.filters.filter.language.label": "Language",
 
   "search.filters.filter.language.placeholder": "Language",
+
+  "search.filters.filter.procien_lines.head": "Procien research line",
+
+  "search.filters.filter.procien_lines.placeholder": "Procien research line",
+
+  "search.filters.filter.procien_lines.label": "Procien research line",
+
+  "search.filters.filter.ods.head": "Sustainable Development Goals",
+
+  "search.filters.filter.ods.placeholder": "Sustainable Development Goals",
+
+  "search.filters.filter.ods.label": "Sustainable Development Goals",
 
   "search.filters.filter.projectOrgUnits.head": "Organizations",
 
@@ -8957,7 +9007,7 @@
   "layout.tab.header.Person.details": "Profile",
   "layout.tab.header.Person.publications": "Publications",
   "layout.tab.header.Person.projects": "Projects",
-  "layout.tab.header.Person.otherinfo": "Other",
+  "layout.tab.header.Person.otherinfo": "Professional summary",
   "layout.tab.header.Person.indicators": "Metrics",
   "layout.tab.header.Person.secure": "Secured Tab",
   "layout.tab.header.OrgUnit.maininformation": "Information",
@@ -9055,7 +9105,7 @@
   "layout.field.label.Project.[dc.subject]": "Keywords",
   "layout.field.label.Project.[oairecerif.acronym]": "Acronym",
   "layout.field.label.Project.[dc.title]": "Project Title",
-  "layout.field.label.Project.[crispj.coordinator]": "Consortium Coordinator",
+  "layout.field.label.Project.[crispj.coordinator]": "Implementing institution",
   "layout.field.label.Project.[crispj.partnerou]": "Partner Organisations",
   "layout.field.label.Project.[oairecerif.internalid]": "Internal ID",
   "layout.field.label.Project.[crispj.investigator]": "Principal Investigator",
