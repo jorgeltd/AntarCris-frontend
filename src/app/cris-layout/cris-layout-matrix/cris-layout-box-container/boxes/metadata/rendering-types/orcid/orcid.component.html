@@ -7,9 +7,7 @@
 
       <ng-template #noOrcidUrl>{{ metadataValue.value }}</ng-template>
 
-      <img *ngIf="hasOrcidBadge()"
-           placement="top"
-           ngbTooltip="{{ 'orcid.badge.tooltip' | translate }}"
+      <img
            class="orcid-icon"
            alt="orcid-logo"
            src="assets/images/orcid.logo.icon.svg"/>

@@ -26,3 +26,15 @@ ds-metric-donuts a {
   background-size: contain;
 }
 
+.header-tag {
+  border: 1px solid #555555;
+  border-radius: calc(.5rem - 2px);
+  color: #555555;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+}
+
+.header-tag-primary {
+  border-color: var(--bs-primary) !important;
+  color: var(--bs-primary);
+}

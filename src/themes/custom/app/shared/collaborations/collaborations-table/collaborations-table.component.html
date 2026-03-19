@@ -1,0 +1,25 @@
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">{{ 'collaborations.table.header.country' | translate }}</th>
+            <th scope="col" class="text-right">{{ 'collaborations.table.header.publications' | translate }}</th>
+        </tr>
+    </thead>
+    <tbody>
+      @for (collaboration of collaborations | paginate: { itemsPerPage: pageSize, currentPage: page }; track collaboration) {
+        <tr>
+            <td class="font-weight-bold">{{collaboration[0]}}</td>
+            <td class="text-right">{{collaboration[1]}}</td>
+        </tr>
+      }
+    </tbody>
+</table>
+
+@if (collaborations.length > pageSize) {
+  <div class="d-flex justify-content-center">
+    <ngb-pagination [(page)]="page" [pageSize]="pageSize"
+        [collectionSize]="collaborations.length">
+    </ngb-pagination>
+  </div>
+}
+
