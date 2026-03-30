@@ -2508,9 +2508,13 @@
 
   "explore.index.familyName": "Family name",
 
+  "explore.index.fullName": "Full name",
+
   "explore.index.funding": "Funding",
 
   "explore.index.givenName": "Given name",
+
+  "explore.index.research_topic": "Research topic",
 
   "explore.index.has_content_in_original_bundle": "Has content in original bundle",
 
@@ -5547,6 +5551,10 @@
 
   "search.filters.applied.f.editor": "Editor",
 
+  "search.filters.applied.f.fullName": "Full name",
+
+  "search.filters.applied.f.research_topic": "Research topic",
+
   "search.filters.applied.f.has_content_in_original_bundle": "Has files",
 
   "search.filters.applied.f.ods": "Sustainable Development Goals",
@@ -5742,6 +5750,12 @@
 
   "search.filters.filter.eqorgunit.placeholder": "Organization",
 
+  "search.filters.filter.fullName.head": "Full name",
+
+  "search.filters.filter.fullName.placeholder": "Full name",
+
+  "search.filters.filter.fullName.label": "Search full name",
+
   "search.filters.filter.funding.head": "Funding",
 
   "search.filters.filter.funding.placeholder": "Funding",
@@ -5787,6 +5801,12 @@
   "search.filters.filter.projectStartDate.min.label": "Start",
 
   "search.filters.filter.projectResearchLine.head": "Procien research line",
+
+  "search.filters.filter.research_topic.head": "Research topic",
+
+  "search.filters.filter.research_topic.placeholder": "Research topic",
+
+  "search.filters.filter.research_topic.label": "Search research topic",
 
   "search.filters.filter.jobTitle.head": "Job Title",
 
