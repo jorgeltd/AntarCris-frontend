@@ -30,5 +30,17 @@ import { ThemedThumbnailComponent } from '../../../../../thumbnail/themed-thumbn
  * The component for displaying a list element for an item search result of the type Organisation Unit
  */
 export class OrgUnitSearchResultListElementComponent extends ItemSearchResultListElementComponent {
+  getRorUrl(value: string): string {
+    if (!value) {return '';}
 
+    return value.startsWith('http')
+      ? value
+      : `https://ror.org/${value}`;
+  }
+
+  getRorId(value: string): string {
+    if (!value) {return '';}
+
+    return value.replace(/^https?:\/\/ror\.org\//, '');
+  }
 }
