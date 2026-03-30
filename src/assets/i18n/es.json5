@@ -2846,6 +2846,9 @@
   // "explore.index.fullName": "Full name",
   "explore.index.fullName": "Nombre completo",
 
+  // "explore.index.organizationName": "Institution name",
+  "explore.index.organizationName": "Nombre de institución",
+
   // "explore.index.ods": "Sustainable Development Goals",
   "explore.index.ods": "Objetivos de Desarrollo Sostenible",
 
@@ -6557,6 +6560,9 @@
   // "search.filters.applied.f.original_bundle_descriptions": "File description",
   "search.filters.applied.f.original_bundle_descriptions": "Descripción del archivo",
 
+  // "search.filters.applied.f.organizationName": "Institution name",
+  "search.filters.applied.f.organizationName": "Nombre de institución",
+
   // "search.filters.applied.f.itemtype": "Type",
   "search.filters.applied.f.itemtype": "Tipo",
 
@@ -6829,6 +6835,15 @@
 
   // "search.filters.filter.organizationFoundingDate.label": "Search date founded",
   "search.filters.filter.organizationFoundingDate.label": "Búsqueda por Fecha de fundación",
+
+  // "search.filters.filter.organizationName.head": "Institution name",
+  "search.filters.filter.organizationName.head": "Nombre de institución",
+
+  // "search.filters.filter.organizationName.placeholder": "Institution name",
+  "search.filters.filter.organizationName.placeholder": "Nombre de institución",
+
+  //"search.filters.filter.organizationName.label": "Search institution name",
+  "search.filters.filter.organizationName.label": "Buscar nombre de institución",
 
   // "search.filters.filter.scope.head": "Scope",
   "search.filters.filter.scope.head": "Alcance",

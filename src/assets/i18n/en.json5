@@ -2564,6 +2564,8 @@
 
   "explore.index.organizationLegalName": "Organization legal name",
 
+  "explore.index.organizationName": "Institution name",
+
   "explore.index.original_bundle_descriptions": "Original bundle descriptions",
 
   "explore.index.original_bundle_filenames": "Original bundle filenames",
@@ -5559,6 +5561,8 @@
 
   "search.filters.applied.f.ods": "Sustainable Development Goals",
 
+  "search.filters.applied.f.organizationName": "Institution name",
+
   "search.filters.applied.f.procien_lines": "Procien research line",
 
   "search.filters.applied.f.projectinvestigators": "Investigator",
@@ -5885,6 +5889,12 @@
   "search.filters.filter.organizationFoundingDate.placeholder": "Date Founded",
 
   "search.filters.filter.organizationFoundingDate.label": "Search date founded",
+
+  "search.filters.filter.organizationName.head": "Institution name",
+
+  "search.filters.filter.organizationName.placeholder": "Institution name",
+
+  "search.filters.filter.organizationName.label": "Search institution name",
 
   "search.filters.filter.scope.head": "Scope",
 
