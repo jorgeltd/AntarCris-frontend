@@ -30,8 +30,10 @@
               class="lead"
               [innerHTML]="dsoTitle || ('person.listelement.no-title' | translate)"></span>
         <div *ngIf="dso.firstMetadataValue('person.affiliation.name')">
-          <ds-metadata-link-view [item]="dso" [metadata]="dso.allMetadata('person.affiliation.name')[0]" metadataName="ORGUNIT"></ds-metadata-link-view>
-        </div>
+          <span *ngFor="let orgunit of dso.allMetadata('person.affiliation.name'); let i=index; let last=last;">
+            <ds-metadata-link-view [item]="dso" [metadata]="orgunit" metadataName="ORGUNIT"></ds-metadata-link-view><span *ngIf="!last">; </span>
+          </span>
+         </div>
         <div *ngIf="dso.firstMetadataValue('person.identifier.orcid') as metadataValue">
           <span class="d-flex align-items-center">
             <a href="https://orcid.org/{{metadataValue}}" target="_blank">
