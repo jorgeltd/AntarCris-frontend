@@ -4358,6 +4358,15 @@
   // "item.preview.dspace.entity.type": "Entity Type:",
   "item.preview.dspace.entity.type": "Tipo de entidad:",
 
+  // "item.project.endDate": "To:",
+  "item.project.endDate": "Desde:",
+
+  // "item.project.startDate": "From:",
+  "item.project.startDate": "Hasta:",
+
+  // "item.project.fundedBy": "Funded by: ",
+  "item.project.fundedBy": "Financiado por: ",
+
   // "item.select.confirm": "Confirm selected",
   "item.select.confirm": "Confirmar seleccionado",
 

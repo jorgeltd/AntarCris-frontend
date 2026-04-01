@@ -3868,6 +3868,12 @@
 
   "item.preview.dspace.entity.type": "Entity Type:",
 
+  "item.project.endDate": "To:",
+
+  "item.project.startDate": "From:",
+
+  "item.project.fundedBy": "Funded by: ",
+
   "item.select.confirm": "Confirm selected",
 
   "item.select.empty": "No items to show",
