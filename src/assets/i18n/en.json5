@@ -2467,9 +2467,13 @@
 
   "explore.facet-section.title": "Discover",
 
+  "explore.index.anid_oecd": "ANID lines",
+
   "explore.index.all": "All",
 
   "explore.index.author": "Author",
+
+  "explore.index.country": "Country",
 
   "explore.index.graphitemtype": "Graph by type",
 
@@ -2572,7 +2576,7 @@
 
   "explore.index.ouname": "Name",
 
-  "explore.index.procien_lines": "Procien research line",
+  "explore.index.procien_lines": "INACH research line",
 
   "explore.index.projectOrgUnits": "Organizations",
 
@@ -2581,6 +2585,8 @@
   "explore.index.pjtitle": "Title",
 
   "explore.index.projectinvestigators": "Researcher",
+
+  "explore.index.quartile": "Quartile",
 
   "explore.index.rodept": "Department",
 
@@ -5539,7 +5545,11 @@
 
   "search.filters.applied.f.title": "Title",
 
+  "search.filters.applied.f.anid_eocd": "ANID lines",
+
   "search.filters.applied.f.author": "Author",
+
+  "search.filters.applied.f.country": "Country",
 
   "search.filters.applied.f.dateIssued.max": "End date",
 
@@ -5563,9 +5573,11 @@
 
   "search.filters.applied.f.organizationName": "Institution name",
 
-  "search.filters.applied.f.procien_lines": "Procien research line",
+  "search.filters.applied.f.procien_lines": "INACH research line",
 
   "search.filters.applied.f.projectinvestigators": "Investigator",
+
+  "search.filters.applied.f.quartile": "Quartile",
 
   "search.filters.applied.f.original_bundle_filenames": "File name",
 
@@ -5670,6 +5682,12 @@
 
   "search.filters.filter.title.label": "Search Title",
 
+  "search.filters.filter.anid_oecd.head": "ANID lines",
+
+  "search.filters.filter.anid_oecd.placeholder": "ANID lines",
+
+  "search.filters.filter.anid_oecd.label": "Search ANID lines",
+
   "search.filters.filter.author.head": "Author",
 
   "search.filters.filter.author.placeholder": "Author name",
@@ -5687,6 +5705,12 @@
   "search.filters.filter.birthDate.label": "Search birth date",
 
   "search.filters.filter.collapse": "Collapse filter",
+
+  "search.filters.filter.country.head": "Country",
+
+  "search.filters.filter.country.placeholder": "Country",
+
+  "search.filters.filter.country.label": "Search country",
 
   "search.filters.filter.creativeDatePublished.head": "Date Published",
 
@@ -5830,11 +5854,17 @@
 
   "search.filters.filter.language.placeholder": "Language",
 
-  "search.filters.filter.procien_lines.head": "Procien research line",
+  "search.filters.filter.procien_lines.head": "INACH research line",
 
-  "search.filters.filter.procien_lines.placeholder": "Procien research line",
+  "search.filters.filter.procien_lines.placeholder": "INACH research line",
 
-  "search.filters.filter.procien_lines.label": "Procien research line",
+  "search.filters.filter.procien_lines.label": "INACH research line",
+
+  "search.filters.filter.quartile.head": "Quartile",
+
+  "search.filters.filter.quartile.placeholder": "Quartile",
+
+  "search.filters.filter.quartile.label": "Search quartile",
 
   "search.filters.filter.ods.head": "Sustainable Development Goals",
 

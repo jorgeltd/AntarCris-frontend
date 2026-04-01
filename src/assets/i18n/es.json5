@@ -2843,6 +2843,12 @@
   // "error.validation.metadata.qualifier.max-length": "This field may not contain more than 64 characters",
   "error.validation.metadata.qualifier.max-length": "Este campo no puede contener mas de 64 caracteres",
 
+  // "explore.index.anid_oecd": "ANID lines",
+  "explore.index.anid_oecd": "Líneas ANID",
+
+  // "explore.index.country": "Country",
+  "explore.index.country": "País",
+
   // "explore.index.fullName": "Full name",
   "explore.index.fullName": "Nombre completo",
 
@@ -2852,8 +2858,11 @@
   // "explore.index.ods": "Sustainable Development Goals",
   "explore.index.ods": "Objetivos de Desarrollo Sostenible",
 
-  // "explore.index.procien_lines": "Procien lines",
-  "explore.index.procien_lines": "Lineas Procien",
+  // "explore.index.procien_lines": "INACH lines",
+  "explore.index.procien_lines": "Lineas INACH",
+
+  // "explore.index.quartile": "Quartile",
+  "explore.index.quartile": "Cuatil",
 
   // "explore.index.research_topic": "Research topic",
   "explore.index.research_topic": "Tópico de investigación",
@@ -6527,8 +6536,14 @@
   // "search.filters.applied.f.title": "Title",
   "search.filters.applied.f.title": "Título",
 
+  // "search.filters.applied.f.anid_eocd": "ANID lines",
+  "search.filters.applied.f.anid_eocd": "Líneas ANID",
+
   // "search.filters.applied.f.author": "Author",
   "search.filters.applied.f.author": "Autor",
+
+  // "search.filters.applied.f.country": "Country",
+  "search.filters.applied.f.country": "País",
 
   // "search.filters.applied.f.dateIssued.max": "End date",
   "search.filters.applied.f.dateIssued.max": "Fecha de finalización",
@@ -6593,8 +6608,11 @@
   // "search.filters.applied.f.ods": "Sustainable Development Goals",
   "search.filters.applied.f.ods": "Objetivos de Desarrollo Sostenible",
 
-  // "search.filters.applied.f.procien_lines": "Procien Lines",
-  "search.filters.applied.f.procien_lines": "Lineas Procien",
+  // "search.filters.applied.f.procien_lines": "INACH Lines",
+  "search.filters.applied.f.procien_lines": "Lineas INACH",
+
+  // "search.filters.applied.f.quartile": "Quartile",
+  "search.filters.applied.f.quartile": "Cuartil",
 
   // "search.filters.applied.operator.equals": "",
   "search.filters.applied.operator.equals": "",
@@ -6626,6 +6644,15 @@
   // "search.filters.filter.title.label": "Search Title",
   "search.filters.filter.title.label": "Buscar por título",
 
+  // "search.filters.filter.anid_oecd.head": "ANID lines",
+  "search.filters.filter.anid_oecd.head": "Líneas ANID",
+
+  // "search.filters.filter.anid_oecd.placeholder": "ANID lines",
+  "search.filters.filter.anid_oecd.placeholder": "Líneas ANID",
+
+  // "search.filters.filter.anid_oecd.label": "Search ANID lines",
+  "search.filters.filter.anid_oecd.label": "Search líneas ANID",
+
   // "search.filters.filter.author.head": "Author",
   "search.filters.filter.author.head": "Autor",
 
@@ -6646,6 +6673,15 @@
 
   // "search.filters.filter.collapse": "Collapse filter",
   "search.filters.filter.collapse": "Contraer filtro",
+
+  // "search.filters.filter.country.head": "Country",
+  "search.filters.filter.country.head": "País",
+
+  // "search.filters.filter.country.placeholder": "Country",
+  "search.filters.filter.country.placeholder": "País",
+
+  // "search.filters.filter.country.label": "Search country",
+  "search.filters.filter.country.label": "Buscar país",
 
   // "search.filters.filter.creativeDatePublished.head": "Date Published",
   "search.filters.filter.creativeDatePublished.head": "Fecha de publicación",
@@ -6725,14 +6761,23 @@
   // "search.filters.filter.expand": "Expand filter",
   "search.filters.filter.expand": "Expandir filtro",
 
-  // "search.filters.filter.procien_lines.head": "Procien Lines",
-  "search.filters.filter.procien_lines.head": "Lineas Procien",
+  // "search.filters.filter.procien_lines.head": "INACH Lines",
+  "search.filters.filter.procien_lines.head": "Lineas INACH",
 
-  // "search.filters.filter.procien_lines.placeholder": "Procien Lines",
-  "search.filters.filter.procien_lines.placeholder": "Lineas Procien",
+  // "search.filters.filter.procien_lines.placeholder": "INACH Lines",
+  "search.filters.filter.procien_lines.placeholder": "Lineas INACH",
 
-  // "search.filters.filter.procien_lines.label": "Procien Lines",
-  "search.filters.filter.procien_lines.label": "Lineas Procien",
+  // "search.filters.filter.procien_lines.label": "INACH Lines",
+  "search.filters.filter.procien_lines.label": "Lineas INACH",
+
+  // "search.filters.filter.quartile.head": "Quartile",
+  "search.filters.filter.quartile.head": "Cuartil",
+
+  // "search.filters.filter.quartile.placeholder": "Quartile",
+  "search.filters.filter.quartile.placeholder": "Cuartil",
+
+  // "search.filters.filter.quartile.label": "Search quartile",
+  "search.filters.filter.quartile.label": "Buscar cuartil",
 
   // "search.filters.filter.ods.head": "Sustainable Development Goals",
   "search.filters.filter.ods.head": "Objetivos de Desarrollo Sostenible",
