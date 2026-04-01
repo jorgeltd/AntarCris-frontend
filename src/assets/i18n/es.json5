@@ -2852,14 +2852,29 @@
   // "explore.index.fullName": "Full name",
   "explore.index.fullName": "Nombre completo",
 
+  // "explore.index.fundername": "Funder",
+  "explore.index.fundername": "Institución financiadora",
+
+  // "explore.index.implementingInstitution": "Implementing institution",
+  "explore.index.implementingInstitution": "Organización",
+
   // "explore.index.organizationName": "Institution name",
   "explore.index.organizationName": "Nombre de institución",
 
   // "explore.index.ods": "Sustainable Development Goals",
   "explore.index.ods": "Objetivos de Desarrollo Sostenible",
 
+  // "explore.index.principalInvestigator": "Principal investigator",
+  "explore.index.principalInvestigator": "Investigador a cargo",
+
   // "explore.index.procien_lines": "INACH lines",
   "explore.index.procien_lines": "Lineas INACH",
+
+  // "explore.index.projectEndDate": "End date",
+  "explore.index.projectEndDate": "Fecha de inicio",
+
+  // "explore.index.projectStartDate": "Start date",
+  "explore.index.projectStartDate": "Fecha de termino",
 
   // "explore.index.quartile": "Quartile",
   "explore.index.quartile": "Cuatil",
@@ -6560,6 +6575,9 @@
   // "search.filters.applied.f.fullName": "Full name",
   "search.filters.applied.f.fullName": "Nombre completo",
 
+  // "search.filters.applied.f.fundername": "Funder",
+  "search.filters.applied.f.fundername": "Institución financiadora",
+
   // "search.filters.applied.f.research_topic": "Research topic",
   "search.filters.applied.f.research_topic": "Tópico de investigación",
 
@@ -6577,6 +6595,9 @@
 
   // "search.filters.applied.f.organizationName": "Institution name",
   "search.filters.applied.f.organizationName": "Nombre de institución",
+
+  // "search.filters.applied.f.implementingInstitution": "Implementing institution",
+  "search.filters.applied.f.implementingInstitution": "Organización",
 
   // "search.filters.applied.f.itemtype": "Type",
   "search.filters.applied.f.itemtype": "Tipo",
@@ -6607,6 +6628,15 @@
 
   // "search.filters.applied.f.ods": "Sustainable Development Goals",
   "search.filters.applied.f.ods": "Objetivos de Desarrollo Sostenible",
+
+  // "search.filters.applied.f.principalInvestigator": "Principal investigator",
+  "search.filters.applied.f.principalInvestigator": "Investigador a cargo",
+
+  // "search.filters.applied.f.projectEndDate": "End date",
+  "search.filters.applied.f.projectEndDate": "Fecha de termino",
+
+  // "search.filters.applied.f.projectStartDate": "Start date",
+  "search.filters.applied.f.projectStartDate": "Fecha de inicio",
 
   // "search.filters.applied.f.procien_lines": "INACH Lines",
   "search.filters.applied.f.procien_lines": "Lineas INACH",
@@ -6761,6 +6791,15 @@
   // "search.filters.filter.expand": "Expand filter",
   "search.filters.filter.expand": "Expandir filtro",
 
+  // "search.filters.filter.principalInvestigator.head": "Principal investigator",
+  "search.filters.filter.principalInvestigator.head": "Investigador a cargo",
+
+  // "search.filters.filter.principalInvestigator.palceholder": "Principal investigator",
+  "search.filters.filter.principalInvestigator.palceholder": "Investigador a cargo",
+
+  // "search.filters.filter.principalInvestigator.label": "Search principal investigator",
+  "search.filters.filter.principalInvestigator.label": "Buscar investigador a cargo",
+
   // "search.filters.filter.procien_lines.head": "INACH Lines",
   "search.filters.filter.procien_lines.head": "Lineas INACH",
 
@@ -6808,6 +6847,15 @@
 
   // "search.filters.filter.original_bundle_descriptions.label": "Search File description",
   "search.filters.filter.original_bundle_descriptions.label": "Buscar por descripción del archivo",
+
+  // "search.filters.filter.implementingInstitution.head": "Implementing institution",
+  "search.filters.filter.implementingInstitution.head": "Organización",
+
+  // "search.filters.filter.implementingInstitution.placeholder": "Implementing institution",
+  "search.filters.filter.implementingInstitution.placeholder": "Organización",
+
+  // "search.filters.filter.implementingInstitution.label": "Search Implementing institution",
+  "search.filters.filter.implementingInstitution.label": "Buscar organización",
 
   // "search.filters.filter.itemtype.head": "Type",
   "search.filters.filter.itemtype.head": "Tipo",
@@ -6934,6 +6982,15 @@
 
   // "search.filters.filter.fullName.label": "Search full name",
   "search.filters.filter.fullName.label": "Buscar nombre completo",
+
+  // "search.filters.filter.fundername.head": "Funder",
+  "search.filters.filter.fundername.head": "Institución financiadora",
+
+  // "search.filters.filter.fundername.placeholder": "Funder",
+  "search.filters.filter.fundername.placeholder": "Institución financiadora",
+
+  // "search.filters.filter.fundername.label": "Search funder",
+  "search.filters.filter.fundername.label": "Buscar institución financiadora",
 
   // "search.filters.filter.funding.head": "Funding",
   "search.filters.filter.funding.head": "Financiación",

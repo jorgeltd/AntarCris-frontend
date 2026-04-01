@@ -2514,6 +2514,8 @@
 
   "explore.index.fullName": "Full name",
 
+  "explore.index.fundername": "Funder",
+
   "explore.index.funding": "Funding",
 
   "explore.index.givenName": "Given name",
@@ -2521,6 +2523,8 @@
   "explore.index.research_topic": "Research topic",
 
   "explore.index.has_content_in_original_bundle": "Has content in original bundle",
+
+  "explore.index.implementingInstitution": "Implementing institution",
 
   "explore.index.isAuthorOfPublication": "Publication's author",
 
@@ -2535,6 +2539,8 @@
   "explore.index.isPersonOfOrgUnit": "Organization's person",
 
   "explore.index.isPersonOfProject": "Project's person",
+
+  "explore.index.principalInvestigator": "Principal investigator",
 
   "explore.index.isProjectOfOrgUnit": "Organization's project",
 
@@ -2583,6 +2589,10 @@
   "explore.index.personOrgUnits": "Organizations",
 
   "explore.index.pjtitle": "Title",
+
+  "explore.index.projectEndDate": "End date",
+
+  "explore.index.projectStartDate": "Start date",
 
   "explore.index.projectinvestigators": "Researcher",
 
@@ -5565,6 +5575,8 @@
 
   "search.filters.applied.f.fullName": "Full name",
 
+  "search.filters.applied.f.fundername": "Funder",
+
   "search.filters.applied.f.research_topic": "Research topic",
 
   "search.filters.applied.f.has_content_in_original_bundle": "Has files",
@@ -5575,6 +5587,10 @@
 
   "search.filters.applied.f.procien_lines": "INACH research line",
 
+  "search.filters.applied.f.projectEndDate": "End date",
+
+  "search.filters.applied.f.projectStartDate": "Start date",
+
   "search.filters.applied.f.projectinvestigators": "Investigator",
 
   "search.filters.applied.f.quartile": "Quartile",
@@ -5582,6 +5598,8 @@
   "search.filters.applied.f.original_bundle_filenames": "File name",
 
   "search.filters.applied.f.original_bundle_descriptions": "File description",
+
+  "search.filters.applied.f.implementingInstitution": "Implementing institution",
 
   "search.filters.applied.f.itemtype": "Type",
 
@@ -5592,6 +5610,8 @@
   "search.filters.applied.f.personorgunits": "Organisation",
 
   "search.filters.applied.f.personOrgUnits": "Organisation",
+
+  "search.filters.applied.f.principalInvestigator": "Principal investigator",
 
   "search.filters.applied.f.projectorgunits": "Organisation",
 
@@ -5804,6 +5824,12 @@
 
   "search.filters.filter.original_bundle_descriptions.label": "Search File description",
 
+  "search.filters.filter.implementingInstitution.head": "Implementing institution",
+
+  "search.filters.filter.implementingInstitution.placeholder": "Implementing institution",
+
+  "search.filters.filter.implementingInstitution.label": "Search Implementing institution",
+
   "search.filters.filter.itemtype.head": "Type",
 
   "search.filters.filter.itemtype.placeholder": "Type",
@@ -5853,6 +5879,12 @@
   "search.filters.filter.language.label": "Language",
 
   "search.filters.filter.language.placeholder": "Language",
+
+  "search.filters.filter.principalInvestigator.head": "Principal investigator",
+
+  "search.filters.filter.principalInvestigator.palceholder": "Principal investigator",
+
+  "search.filters.filter.principalInvestigator.label": "Search principal investigator",
 
   "search.filters.filter.procien_lines.head": "INACH research line",
 
@@ -5949,6 +5981,12 @@
   "search.filters.filter.submitter.label": "Search submitter",
 
   "search.filters.filter.show-tree": "Browse {{ name }} tree",
+
+  "search.filters.filter.fundername.head": "Funder",
+
+  "search.filters.filter.fundername.placeholder": "Funder",
+
+  "search.filters.filter.fundername.label": "Search funder",
 
   "search.filters.filter.funding.head": "Funding",
 
