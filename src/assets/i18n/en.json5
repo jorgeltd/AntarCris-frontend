@@ -2465,6 +2465,8 @@
 
   "explore.counters-section.project_funding": "Projects",
 
+  "explore.counters-section.thesis": "Thesis",
+
   "explore.facet-section.title": "Discover",
 
   "explore.index.anid_oecd": "ANID lines",
@@ -2630,6 +2632,8 @@
 
   "explore.search-section.reset-button": "Reset",
 
+  "explore.search-section.thesis.title": "Search Thesis",
+
   "explore.infrastructure.breadcrumbs": "Infrastructure",
 
   "explore.fundings.breadcrumbs": "Fundings",
@@ -2645,6 +2649,8 @@
   "explore.researchoutputs.breadcrumbs": "Research Outputs",
 
   "explore.researcherprofiles.breadcrumbs": "People",
+
+  "explore.thesis.breadcrumbs": "Thesis",
 
   "browse.metadata.rsoTitle.breadcrumbs": "Browse by Title",
 
@@ -4350,6 +4356,8 @@
   "menu.section.explore_projects": "Projects",
 
   "menu.section.explore_fundings_and_projects": "Fundings & Projects",
+
+  "menu.section.explore_thesis": "Thesis",
 
   "menu.section.communities_and_collections": "Communities & Collections",
 
@@ -7627,6 +7635,10 @@
   "subscriptions.table.not-available-message": "The subscribed item has been deleted, or you don't currently have the permission to view it",
 
   "subscriptions.table.empty.message": "You do not have any subscriptions at this time. To subscribe to email updates for a Community or Collection, use the subscription button on the object's page.",
+
+  "thesis.listelement.badge": "Thesis",
+
+  "thesis.search.results.head": "Thesis Search Results",
 
   "thumbnail.default.alt": "Thumbnail Image",
 

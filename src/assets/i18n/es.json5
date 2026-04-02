@@ -8573,6 +8573,12 @@
   // "subscriptions.table.empty.message": "You do not have any subscriptions at this time. To subscribe to email updates for a Community or Collection, use the subscription button on the object's page.",
   "subscriptions.table.empty.message": "Usted no tiene suscripciones. Para subscribirse a las actualizaciones por correo electrónico de una Comunidad o Colección, utilice el botón de suscripción en la página del objeto.",
 
+  // "thesis.listelement.badge": "Thesis",
+  "thesis.listelement.badge": "Tesis",
+
+  // "thesis.search.results.head": "Thesis Search Results",
+  "thesis.search.results.head": "Resultados de búsqueda de tesis",
+
   // "thumbnail.default.alt": "Thumbnail Image",
   "thumbnail.default.alt": "Miniatura",
 
