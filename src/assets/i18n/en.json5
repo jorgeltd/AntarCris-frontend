@@ -2469,7 +2469,7 @@
 
   "explore.facet-section.title": "Discover",
 
-  "explore.index.anid_oecd": "ANID lines",
+  "explore.index.anid_oecd": "ANID research lines",
 
   "explore.index.all": "All",
 
@@ -3879,6 +3879,10 @@
   "item.project.startDate": "From:",
 
   "item.project.fundedBy": "Funded by: ",
+
+  "item.project.institution": "Institution: ",
+
+  "item.project.principalInvestigator": "Principal Investigator: ",
 
   "item.select.confirm": "Confirm selected",
 
@@ -5569,7 +5573,7 @@
 
   "search.filters.applied.f.title": "Title",
 
-  "search.filters.applied.f.anid_eocd": "ANID lines",
+  "search.filters.applied.f.anid_eocd": "ANID research lines",
 
   "search.filters.applied.f.author": "Author",
 
@@ -5621,13 +5625,13 @@
 
   "search.filters.applied.f.namedresourcetype": "Status",
 
-  "search.filters.applied.f.personorgunits": "Organisation",
+  "search.filters.applied.f.personorgunits": "Organization",
 
-  "search.filters.applied.f.personOrgUnits": "Organisation",
+  "search.filters.applied.f.personOrgUnits": "Organization",
 
   "search.filters.applied.f.principalInvestigator": "Principal investigator",
 
-  "search.filters.applied.f.projectorgunits": "Organisation",
+  "search.filters.applied.f.projectorgunits": "Organization",
 
   "search.filters.applied.f.subject": "Subject",
 
@@ -5651,7 +5655,7 @@
 
   "search.filters.applied.f.graphpubldatetrl": "Public date RTL",
 
-  "search.filters.applied.f.organization": "Organisation",
+  "search.filters.applied.f.organization": "Organization",
 
   "search.filters.applied.charts.defaultConfiguration.title": "Search Output",
 
@@ -5716,11 +5720,11 @@
 
   "search.filters.filter.title.label": "Search Title",
 
-  "search.filters.filter.anid_oecd.head": "ANID lines",
+  "search.filters.filter.anid_oecd.head": "ANID research lines",
 
-  "search.filters.filter.anid_oecd.placeholder": "ANID lines",
+  "search.filters.filter.anid_oecd.placeholder": "ANID research lines",
 
-  "search.filters.filter.anid_oecd.label": "Search ANID lines",
+  "search.filters.filter.anid_oecd.label": "Search ANID research lines",
 
   "search.filters.filter.author.head": "Author",
 
@@ -6205,17 +6209,17 @@
 
   "sorting.organization.legalName.DESC": "Legal Name Descending",
 
-  "sorting.organisation.address.addressCountry.ASC": "Country Ascending",
+  "sorting.organization.address.addressCountry.ASC": "Country Ascending",
 
-  "sorting.organisation.address.addressCountry.DESC": "Country Descending",
+  "sorting.organization.address.addressCountry.DESC": "Country Descending",
 
-  "sorting.organisation.address.addressLocality.ASC": "Locality Ascending",
+  "sorting.organization.address.addressLocality.ASC": "Locality Ascending",
 
-  "sorting.organisation.address.addressLocality.DESC": "Locality Descending",
+  "sorting.organization.address.addressLocality.DESC": "Locality Descending",
 
-  "sorting.organisation.address.foundingDate.ASC": "Founding Date Ascending",
+  "sorting.organization.foundingDate.ASC": "Founding Date Ascending",
 
-  "sorting.organisation.address.foundingDate.DESC": "Founding Date Descending",
+  "sorting.organization.foundingDate.DESC": "Founding Date Descending",
 
   "sorting.person.familyName.ASC": "Surname Ascending",
 
@@ -9211,25 +9215,25 @@
   "layout.field.label.OrgUnit.[organization.address.addressLocality]": "City",
   "layout.field.label.OrgUnit.[dc.description.abstract]": "Description",
   "layout.field.label.OrgUnit.[crisou.director]": "Director",
-  "layout.field.label.OrgUnit.[organization.parentOrganization]": "Parent Organisation",
+  "layout.field.label.OrgUnit.[organization.parentOrganization]": "Parent Organization",
   "layout.field.label.OrgUnit.[organization.foundingDate]": "Founding Date",
   "layout.field.label.OrgUnit.[crisou.boards]": "Boards",
   "layout.field.label.OrgUnit.[organization.identifier.ror]": "ROR Identifier",
-  "layout.field.label.OrgUnit.[dc.title]": "Organisation Name",
+  "layout.field.label.OrgUnit.[dc.title]": "Organization Name",
 
   "layout.field.label.Project.[dc.description.abstract]": "Description",
   "layout.field.label.Project.[dc.subject]": "Keywords",
   "layout.field.label.Project.[oairecerif.acronym]": "Acronym",
   "layout.field.label.Project.[dc.title]": "Project Title",
   "layout.field.label.Project.[crispj.coordinator]": "Implementing institution",
-  "layout.field.label.Project.[crispj.partnerou]": "Partner Organisations",
+  "layout.field.label.Project.[crispj.partnerou]": "Partner Organizations",
   "layout.field.label.Project.[oairecerif.internalid]": "Internal ID",
   "layout.field.label.Project.[crispj.investigator]": "Principal Investigator",
   "layout.field.label.Project.[oairecerif.project.status]": "Status",
   "layout.field.label.Project.[oairecerif.project.startDate]": "Start Date",
   "layout.field.label.Project.[oairecerif.project.endDate]": "End Date",
   "layout.field.label.Project.[crispj.coinvestigators]": "Investigators",
-  "layout.field.label.Project.[crispj.organization]": "Organisations",
+  "layout.field.label.Project.[crispj.organization]": "Organizations",
   "layout.field.label.Project.[dc.relation.equipment]": "Uses",
   "layout.field.label.Project.[oairecerif.identifier.url]": "Project Web Site",
   "layout.field.label.Project.[crispj.openaireid]": "OpenAIRE ID",
@@ -9276,7 +9280,7 @@
   "layout.field.label.Event.[crisevent.organizerpj]": "Organizer",
   "layout.field.label.Event.[crisevent.sponsorou]": "Sponsor",
   "layout.field.label.Event.[crisevent.sponsorpj]": "Sponsor",
-  "layout.field.label.Event.[crisevent.partnerou]": "Partner Organisation",
+  "layout.field.label.Event.[crisevent.partnerou]": "Partner Organization",
   "layout.field.label.Event.[crisevent.partnerpj]": "Partner Project",
   "layout.field.label.Event.[oairecerif.acronym]": "Acronym",
   "layout.field.label.Event.[dc.description.abstract]": "Abstract",
@@ -9287,7 +9291,7 @@
   "layout.field.label.Equipment.[dc.description]": "Description",
   "layout.field.label.Equipment.[oairecerif.internalid]": "Internal ID",
   "layout.field.label.Equipment.[dc.title]": "Name",
-  "layout.field.label.Equipment.[crisequipment.ownerou]": "Owner Organisation",
+  "layout.field.label.Equipment.[crisequipment.ownerou]": "Owner Organization",
 
   "layout.field.label.Publication.[dc.relation.ispartof]": "Journal",
   "layout.field.label.Publication.[dc.relation.issn]": "ISSN",
@@ -9332,11 +9336,11 @@
   "layout.field.label.Person.NESTED[crisrp.qualification.start]": "Start",
   "layout.field.label.Person.NESTED[crisrp.qualification.end]": "End",
   "layout.field.label.Person.NESTED[oairecerif.affiliation.role]": "Role",
-  "layout.field.label.Person.NESTED[oairecerif.person.affiliation]": "Organisation",
+  "layout.field.label.Person.NESTED[oairecerif.person.affiliation]": "Organization",
   "layout.field.label.Person.NESTED[oairecerif.affiliation.startDate]": "Start",
   "layout.field.label.Person.NESTED[oairecerif.affiliation.endDate]": "End",
   "layout.field.label.Person.NESTED[crisrp.education.role]": "Role",
-  "layout.field.label.Person.NESTED[crisrp.education]": "Organisation",
+  "layout.field.label.Person.NESTED[crisrp.education]": "Organization",
   "layout.field.label.Person.NESTED[crisrp.education.start]": "Start",
   "layout.field.label.Person.NESTED[crisrp.education.end]": "End",
 
