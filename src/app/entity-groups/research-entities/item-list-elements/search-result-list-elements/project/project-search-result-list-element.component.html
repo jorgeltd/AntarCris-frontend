@@ -41,6 +41,7 @@
         <div>
           @for (author of dso.limitedMetadata(authorMetadata, 10); track author; let i = $index; let last = $last) {
             <span>
+              <span>{{'item.project.principalInvestigator' | translate}}</span>
               <ds-metadata-link-view [item]="dso" [metadata]="author" [metadataName]="authorMetadata"></ds-metadata-link-view>
             </span>
           }
@@ -50,6 +51,7 @@
         <div>
           @for (organization of dso.limitedMetadata('crispj.coordinator', 1); track organization) {
             <div>
+              <span>{{'item.project.institution' | translate}}</span>
               <ds-metadata-link-view [item]="dso" [metadata]="organization" [metadataName]="'orgunit'"></ds-metadata-link-view>
             </div>
           }
